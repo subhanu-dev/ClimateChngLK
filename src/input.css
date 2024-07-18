@@ -2,4 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
- 
+#navbtn-svg{
+    /* background-color: aqua; */
+}
+
+
+.btnshadow{
+box-shadow: 2px 1px 3px white;
+}
+
+/* #button:hover
+{
+    box-shadow: 3px 2px 5px white;
+} */
+#button:hover #circles{
+    width:80px;
+    height:80px;
+}
+
+.globerotation{
+    animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) ;
+    }
+
+    50% {
+        transform: rotate(180deg) ;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.callout{
+    clip-path: circle(0rem at center);
+}
+.tooltip-show {
+    clip-path: circle(20rem at center);
+}
+

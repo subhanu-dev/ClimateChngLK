@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'space':['Space Grotesk', 'sans-serif']
+        'space':['Space Grotesk', 'sans-serif'],
+        'sinhala':['Noto Sans Sinhala','sans-serif']
+
       },
       colors:{
         'darkgreen':['#031806'],

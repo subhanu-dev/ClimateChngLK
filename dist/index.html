@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body class="font-space text-white bg-darkgreen-0">
@@ -22,13 +24,36 @@
             <div id="bar3" class=""></div>
         </div>
     </nav>
-    <svg width="200" height="250" xmlns="http://www.w3.org/2000/svg">
-
-        <path d="M0.206787 0.672729H78.4137V66.2455C78.4137 77.8434 69.0117 87.2455 57.4137 87.2455H20.2068C9.16111 87.2455 0.206787 78.2912 0.206787 67.2455V0.672729Z" fill="red"/>
-    
+    <svg id="navbtn-svg" class="absolute right-4 -top-1  "width="200" height="250"  xmlns="http://www.w3.org/2000/svg">
+<!-- 
+        <path class="translate-x-20"   d="M0.206787 0.672729H78.4137V66.2455C78.4137 77.8434 69.0117 87.2455 57.4137 87.2455H20.2068C9.16111 87.2455 0.206787 78.2912 0.206787 67.2455V0.672729Z" fill="white"/>
+       
+        <path class="translate-y-2 translate-x-12 " d="M0 0H30C39.3888 0 47 7.61116 47 17V68C47 79.598 37.598 89 26 89H20C8.95431 89 0 80.0457 0 69V0Z" fill="#031806"/> -->
+        <svg class=" " width="150" height="150" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M184.101 112.026C183.519 126.717 171.513 138.466 156.811 138.466H111.046C95.5194 138.466 82.7492 126.251 82.1492 110.736C81.2988 88.7489 80.2793 59.4738 80.2793 45.5C80.2793 21.5295 0 21.5295 0 21.5295V0H137.529H271.279V21.5295C271.279 21.5295 200 17 190.279 45.5C186.919 55.3515 185.046 88.1683 184.101 112.026Z" fill="white"/>
+            </svg>
 
 </svg>
-    <script defer src="app.js"></script>
+<main class="grid grid-cols-2 w-[75%] mx-auto font-bold items-center mt-10 p-5">
+    <div id="content" class="">
+        <h1 class="text-6xl">The Climate Clock <br>is TICkING</h1>
+        <h2 class="text-2xl">And You Think <span class="font-sinhala">ශ්‍රීලංකා </span> is Immune?</h2>
+        <p class="max-w-96 font-medium mt-2">Harness the power of knowledge and action to combat climate change. Discover what you can do today for a sustainable tomorrow.</p>
+        <a href="analytics.html">
+            <div id="button" class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300"><span class="relative z-20">Start Here</span>
+            <div id="circles" class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 inset-0 -top-6 -left-6 blur-sm duration-500  "></div></div>
+        </a>
+    </div>
+    <div id="images" class="relative">
+        <img src="images\globe img.png" alt="globe image" class="max-w-[500px] justify-self-center ml-20 globerotation" id="globe">
+        <div id="blurred" class="rounded-full bg-white absolute w-80 h-80 top-[15%] left-[25%] -z-20 blur-3xl"></div>
+        <img src="images/callout freeze.png" alt="callouts" class="absolute max-w-20 top-5 right-10  callout duration-700"  id="callout-freeze">
+        <img src="images/callout heat.png" alt="callouts" class="absolute max-w-20 right-0 bottom-10 callout duration-700" id="callout-heat">
+        <img src="images/callout tree.png" alt="callouts" class="absolute max-w-20 top-20 left-20 callout duration-700" id="callout-tree">
+
+    </div>
+</main>
+<script defer src="app.js"></script>
 </body>
 
 </html>
