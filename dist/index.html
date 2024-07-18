@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Clock is TICKING!</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
 </head>
-<body class="font-space">
-    <h1 class="text-center font-bold py-8 text-4xl ">ClimateChngLK</h1>
- <!-- athal ekata google trends embed karala baluwe, passe daamu analytics page ekata -->
-    <div class= " max-w-[300px] max-h-96  bg-black">
-        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3769_RC01/embed_loader.js"></script>
-        <script type="text/javascript">
-          trends.embed.renderExploreWidget("GEO_MAP_1", {"comparisonItem":[{"keyword":"/g/11ksgqqmy","geo":"","time":"today 5-y"},{"keyword":"/m/0d063v","geo":"","time":"today 5-y"}],"category":0,"property":"youtube"}, {"exploreQuery":"date=today%205-y&gprop=youtube&q=%2Fg%2F11ksgqqmy,%2Fm%2F0d063v&hl=en-US","guestPath":"https://trends.google.com:443/trends/embed/"});
-        </script>
-      
-    </div>
-  
+
+<body class="font-space text-white bg-darkgreen-0">
+    <nav>
+        <div class="w-screen absolute h-5 -top-3 bg-white"></div>
+        <h1 class="text-center font-bold py-8 text-4xl ">ClimateChngLK</h1>
+        <div id="bars" class="">
+            <div id="bar1" class="w-28"></div>
+            <div id="bar2" class=""></div>
+            <div id="bar3" class=""></div>
+        </div>
+    </nav>
+    <svg width="200" height="250" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M0.206787 0.672729H78.4137V66.2455C78.4137 77.8434 69.0117 87.2455 57.4137 87.2455H20.2068C9.16111 87.2455 0.206787 78.2912 0.206787 67.2455V0.672729Z" fill="red"/>
+    
+
+</svg>
+    <script defer src="app.js"></script>
 </body>
+
 </html>
