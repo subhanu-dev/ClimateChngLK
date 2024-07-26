@@ -12,7 +12,8 @@ module.exports = {
         'darkgreen':['#031806'],
         'waterdarkblue':['#003A48'],
         'waterlightblue':['#226A7F'],
-        'earthgreen':['#9AAC34']
+        'earthgreen':['#9AAC34'],
+        'bggreen':['#3B8319']
       },
       
     },

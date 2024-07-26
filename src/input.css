@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-#navbtn-svg{
-    /* background-color: aqua; */
+
+*{
+    /* outline:1px solid red; */
 }
+
+html, :root{
+    overflow-x:hidden;
+    
+}
+#navbtn-svg{
+     /* background-color: aqua; */
+}
+
+#bars:hover :nth-child(1){
+   height:5px
+   
+}
+#bars:hover :nth-child(2){
+   height:5px
+}
+#bars:hover :nth-child(3){
+   height:5px
+}
+
 
 
 .btnshadow{
