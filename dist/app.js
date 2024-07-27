@@ -6,26 +6,56 @@ const hamburger= document.querySelector('#bars')
 const navdrop=document.querySelector('#navdrop')
 const topbar=document.querySelector('#topbar')
 const navsvg=document.querySelector('#svg1')
-console.log(navsvg)
 
+// gsap animations
+
+// setting the gsap to paused will not activate them until we say it to play
+
+let tl = gsap.timeline({ paused: true });
+
+tl.to("#animatedCircle1", {
+    duration: 2,
+    attr: { r: 302 },
+    ease: "power2.inOut"
+}, "<")
+
+.to("#animatedCircle2", {
+    duration: 2,
+    attr: { r: 270 },
+    ease: "power2.inOut"
+}, "<")
+
+.to("#animatedCircle3", {
+    duration: 2,
+    attr: { r: 200 },
+    ease: "power2.inOut"
+}, "<")
+
+
+
+// hamburger icon dropping down the nav section and related changes
 
 hamburger.addEventListener('click', function(){
     hamburger.classList.toggle('change')
     navdrop.classList.toggle('drop')
     
     const currentColor = getComputedStyle(topbar).backgroundColor;
-    console.log(currentColor)
+        
    
     if(currentColor=="rgb(255, 255, 255)"){
 
         topbar.style.backgroundColor = '#031806'
         navsvg.setAttribute('fill', '#031806')
+        
     }
     else{
         topbar.style.backgroundColor = "white"
         navsvg.setAttribute('fill', 'white')
-    } 
-        
+     } 
+
+    // playing the gsap animations by activating
+    tl.play();
+   
   
 })
 
@@ -108,6 +138,10 @@ hamburger.addEventListener('click', function(){
 
         setInterval(checkAngle, 1000); // Run checkAngle every 111ms (360 degrees / 40s = 9 degrees/s)
 
+
+
+        
+
 /************************************the facts box content change******************************* */
 
 let facts=[" 27 football fields of forest cleared","2.4 million pounds of carbon dioxide released","Sea levels rise by 0.2 milimiters","consume  60,000 barrels of oil","Over 3,000 tons of plastic waste enter the oceans","Approximately 1 million tons of ice melt from the Greenland ice sheet","The ocean absorbs 2.5 million tons of carbon dioxide","Around 5,000 hectares of wetlands are drained","about 100,000 liters of freshwater are consumed","60 Species go Extinct" ]
@@ -116,10 +150,15 @@ let x=0;
 
 changetext();
 
-function changetext(){    
+function changetext(){
+
+    factsbox.classList.add("fade-out")
     
-      factsbox.innerText= facts[x]
-      x=(x+1) % facts.length;
+    setTimeout(() => {
+        factsbox.innerText = facts[x];
+         factsbox.classList.remove('fade-out');
+        x = (x + 1) % facts.length;
+    }, 1000);
       
 
     }
@@ -128,4 +167,5 @@ setInterval(changetext,5000)
 
 
 
+/************************************************************GSAP Animations******************************************************** */
 

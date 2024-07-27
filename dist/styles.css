@@ -570,8 +570,16 @@ video {
   inset: 0px;
 }
 
+.-bottom-\[600px\] {
+  bottom: -600px;
+}
+
 .-left-6 {
   left: -1.5rem;
+}
+
+.-left-60 {
+  left: -15rem;
 }
 
 .-right-16 {
@@ -596,6 +604,10 @@ video {
 
 .bottom-2 {
   bottom: 0.5rem;
+}
+
+.bottom-60 {
+  bottom: 15rem;
 }
 
 .left-20 {
@@ -712,6 +724,18 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -748,8 +772,28 @@ video {
   height: 100%;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
 .max-h-96 {
   max-height: 24rem;
+}
+
+.min-h-20 {
+  min-height: 5rem;
+}
+
+.min-h-40 {
+  min-height: 10rem;
+}
+
+.min-h-16 {
+  min-height: 4rem;
 }
 
 .w-12 {
@@ -784,6 +828,22 @@ video {
   width: 100vw;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
 .min-w-60 {
   min-width: 15rem;
 }
@@ -796,12 +856,20 @@ video {
   max-width: 24rem;
 }
 
+.max-w-\[25rem\] {
+  max-width: 25rem;
+}
+
 .max-w-\[300px\] {
   max-width: 300px;
 }
 
 .max-w-\[500px\] {
   max-width: 500px;
+}
+
+.max-w-20 {
+  max-width: 5rem;
 }
 
 .-translate-y-full {
@@ -831,6 +899,10 @@ video {
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .self-end {
@@ -892,6 +964,14 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-8 {
@@ -971,6 +1051,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.opacity-100 {
+  opacity: 1;
+}
+
 .blur-3xl {
   --tw-blur: blur(64px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1007,6 +1091,10 @@ video {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 *{
@@ -1073,6 +1161,8 @@ html, :root{
   clip-path: circle(20rem at center);
 }
 
+/************** factsbox****** */
+
 .factsBox{
   background-image: linear-gradient(120deg,White, yellow);
 }
@@ -1081,21 +1171,71 @@ html, :root{
   box-shadow:-2px 2px 5px white;
 }
 
-.fadeinfade{
-  animation:fadeinfadeout 5s ease-in-out infinite
+.fade-out {
+  opacity: 0;
+}
+
+/* doing the fade in fade out with the following class and animation makes certain inconsistencies in changing */
+
+/* .fadeinfade{
+    animation:fadeinfadeout 5s ease-in-out infinite 
 }
 
 @keyframes fadeinfadeout{
-  0%{
-    opacity:0;
+    0%{
+        opacity:0;
+    }
+    40%{
+        opacity:1;
+    }
+
+    90%,100%{
+        opacity:0;
+    }
+}
+
+ */
+
+/* came up with this animation to reveal facts instead */
+
+/* nope this doesnt work either... tried having a block moving over to do a reveal effect*/
+
+/* .revealAnimation{
+    animation: reveal 5s ease-in-out infinite;
+    background-image: linear-gradient(120deg,White, yellow);
+ }
+
+ @keyframes reveal{
+    0%,100%{
+        transform:translatex(-40px),;
+        opacity:1;
+    }
+
+    50%{
+
+        transform:translateX(200px);
+        opacity:0;
+    }
+ } */
+
+/* blur animation for the globes background white blur */
+
+.bluranimation{
+  animation:bluranimation 10s linear infinite;
+}
+
+@keyframes  bluranimation{
+  from
+    {
+    transform:scale(1)
   }
 
-  40%{
-    opacity:1;
+  50%{
+    transform:scale(1.1)
   }
 
-  90%,100%{
-    opacity:0;
+  to{
+    transform:scale(1)
   }
 }
 

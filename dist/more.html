@@ -16,7 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap" rel="stylesheet">
     <!-- importing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body class="font-space text-white bg-darkgreen-0 ">
@@ -48,39 +50,32 @@
 
     <div id="navdrop"
         class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out overflow-hidden ">
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">ClimateChngLK
+        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">
+            ClimateChngLK
         </h1>
         <ul id="navitems" class="text-gray-500 mt-40 self-end text-4xl pr-20 font-bold">
             <li class="text-end">
-                 <a href="index.html" class="hover:text-gray-600 duration-100"> Home</a>
+                <a href="index.html" class="hover:text-gray-600 duration-100"> Home</a>
             </li>
             <li class="text-end"> <a href="action.html" class="hover:text-gray-600 duration-100">Action </a></li>
             <li class="text-end"> <a href="analytics.html" class="hover:text-gray-600 duration-100">Analytics</a></li>
             <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
 
         </ul>
-<div id="svgwrapper" class="relative bottom-60 hidden lg:block ">    
-            <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none" xmlns="http://www.w3.org/2000/svg" class=" absolute">
-                
-                <circle  cx="-20" cy="300" r="300" fill="#031806" id="animatedCircle1"></circle>
-                <circle  cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
-                <circle  cx="-50" cy="300" r="150" fill="#226A7F"id="animatedCircle3" ></circle>
-                </svg>
-            <img src="images/globe img.png" alt="world images" class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50">
-</div>
-            
+        <div id="svgwrapper" class="relative bottom-60 hidden lg:block ">
+            <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none"
+                xmlns="http://www.w3.org/2000/svg" class=" absolute">
+
+                <circle cx="-20" cy="300" r="300" fill="#031806" id="animatedCircle1"></circle>
+                <circle cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
+                <circle cx="-50" cy="300" r="150" fill="#226A7F" id="animatedCircle3"></circle>
+            </svg>
+            <img src="images/globe img.png" alt="world images"
+                class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50">
+        </div>
+
     </div>
-
-
-
-     <!-- google trends-->
-     <div id="googletrends" class= " max-w-[300px] max-h-96  bg-black">
-        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3769_RC01/embed_loader.js"></script>
-        <script type="text/javascript">
-          trends.embed.renderExploreWidget("GEO_MAP_1", {"comparisonItem":[{"keyword":"/g/11ksgqqmy","geo":"","time":"today 5-y"},{"keyword":"/m/0d063v","geo":"","time":"today 5-y"}],"category":0,"property":"youtube"}, {"exploreQuery":"date=today%205-y&gprop=youtube&q=%2Fg%2F11ksgqqmy,%2Fm%2F0d063v&hl=en-US","guestPath":"https://trends.google.com:443/trends/embed/"});
-        </script>
-    
-    </div>
-    <script defer src="app.js"></script>
+<script defer src="app.js"></script>
 </body>
+
 </html>

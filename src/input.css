@@ -67,6 +67,7 @@ box-shadow: 2px 1px 3px white;
     clip-path: circle(20rem at center);
 }
 
+/************** factsbox****** */
 .factsBox{
     background-image: linear-gradient(120deg,White, yellow);
 }
@@ -75,7 +76,16 @@ box-shadow: 2px 1px 3px white;
     box-shadow:-2px 2px 5px white;
 }
 
-.fadeinfade{
+     
+
+.fade-out {
+    opacity: 0;
+}
+
+/* doing the fade in fade out with the following class and animation makes certain inconsistencies in changing */
+
+
+/* .fadeinfade{
     animation:fadeinfadeout 5s ease-in-out infinite 
 }
 
@@ -92,8 +102,50 @@ box-shadow: 2px 1px 3px white;
     }
 }
 
+ */
+
+ /* came up with this animation to reveal facts instead */
+
+ /* nope this doesnt work either... tried having a block moving over to do a reveal effect*/
+
+ /* .revealAnimation{
+    animation: reveal 5s ease-in-out infinite;
+    background-image: linear-gradient(120deg,White, yellow);
+ }
+
+ @keyframes reveal{
+    0%,100%{
+        transform:translatex(-40px),;
+        opacity:1;
+    }
+
+    50%{
+
+        transform:translateX(200px);
+        opacity:0;
+    }
+ } */
 
 
+
+/* blur animation for the globes background white blur */
+ .bluranimation{
+animation:bluranimation 10s linear infinite;
+ }
+
+ @keyframes  bluranimation{
+    from
+    {
+        transform:scale(1)
+    }
+    50%{
+        transform:scale(1.1)
+    }
+    to{
+        transform:scale(1)
+    }
+    }
+ 
 
 /* hamburger menu change */
 .change #bar1{

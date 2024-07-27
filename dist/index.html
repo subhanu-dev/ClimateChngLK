@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empower Climate ACTION!</title>
+    <!-- favicon -->
     <link rel="icon" type="jpg/img" href="images/">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap" rel="stylesheet">
+    <!-- importing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body class="font-space text-white bg-darkgreen-0 ">
@@ -40,10 +44,10 @@
 
     </svg>
 
-    <!-- -----------------------------navdrop-------------------------------------------- -->
+    <!-- --------------------------------------------------------------------navdrop------------------------------------------------------------ -->
 
     <div id="navdrop"
-        class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out ">
+        class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out overflow-hidden ">
         <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">ClimateChngLK
         </h1>
         <ul id="navitems" class="text-gray-500 mt-40 self-end text-4xl pr-20 font-bold">
@@ -55,7 +59,16 @@
             <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
 
         </ul>
-        
+<div id="svgwrapper" class="relative bottom-60 hidden lg:block ">    
+            <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none" xmlns="http://www.w3.org/2000/svg" class=" absolute">
+                
+                <circle  cx="-20" cy="300" r="300" fill="#031806" id="animatedCircle1"></circle>
+                <circle  cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
+                <circle  cx="-50" cy="300" r="150" fill="#226A7F"id="animatedCircle3" ></circle>
+                </svg>
+            <img src="images/globe img.png" alt="world images" class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50">
+</div>
+            
     </div>
 
 
@@ -79,32 +92,34 @@
                 </div>
             </a>
         </div>
+
+        <!------ ---globe rotation thingy----------------- -->
         <div id="images" class="relative">
             <img src="images\globe img.png" alt="globe image"
                 class="max-w-[500px] w-full min-w-60 sm:justify-self-center my-10 lg:my-0 lg:ml-20 globerotation"
                 id="globe">
             <div id="blurred"
-                class="rounded-full bg-white absolute w-20 sm:w-40 md:w-80 h-80 top-[15%] left-[20%] lg:left-[25%] -z-20 blur-3xl">
+                class="rounded-full bg-white absolute w-20 sm:w-40 md:w-80 h-80 top-[15%] left-[20%] lg:left-[25%] -z-20 blur-3xl  bluranimation">
             </div>
-            <img src="images/callout freeze.png" alt="callouts"
+            <img src="images/callout freeze.png" alt="callouts" title="Extreme Temperature Changes"
                 class="absolute max-w-16 md:max-w-36 lg:max-w-20 top-5 right-10  callout duration-700"
                 id="callout-freeze">
-            <img src="images/callout heat.png" alt="callouts"
+            <img src="images/callout heat.png" alt="callouts" title="Rapid Global Warming"
                 class="absolute max-w-16 md:max-w-36 lg:max-w-20  right-0 bottom-10 callout duration-700"
                 id="callout-heat">
-            <img src="images/callout tree.png" alt="callouts"
+            <img src="images/callout tree.png" alt="callouts" title=" Global Scale Deforestration"
                 class="absolute  max-w-16 md:max-w-36 lg:max-w-20  top-20 left-20 callout duration-700"
                 id="callout-tree">
 
         </div>
 
-
-        <div id="for-mobile" class="flex justify-center items-center flex-col lg:hidden mt-16">
-            <h2 class="text-center lg:text-start text-2xl ">And You Think <span
+<!-- only for mobile screens  -->
+        <div id="for-mobile" class="flex justify-center items-center gap-4 lg:hidden mt-16">
+            <h2 class=" text-2xl ">And You Think <span
                     class="font-sinhala font-semibold">ශ්‍රීලංකා </span> is Immune?</h2>
             <a href="analytics.html">
                 <div id="button"
-                    class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300">
+                    class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 text-center w-24 overflow-hidden btnshadow duration-300">
                     <span class="relative z-20">Start Here</span>
                     <div id="circles"
                         class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 inset-0 -top-6 -left-6 blur-sm duration-500  ">
@@ -114,11 +129,14 @@
         </div>
     </main>
 
+<!-- only for desktop -->
+
     <div id="factsbar" class=" justify-center items-center hidden lg:flex mt-10 gap-10">
         <p class="text-3xl font-bold">Every Minute Globally</p>
         <div
-            class=" h-20 w-96 rounded-lg factsBox factsShadow flex items-center justify-center text-black text-base font-semibold ">
-            <p id="factsdiv" class="fadeinfade text-center w-3/4">27 FootBall Fields of Forests Cleared</p>
+            class=" h-20 w-96 rounded-lg factsBox factsShadow flex items-center justify-center text-black text-base font-semibold overflow-hidden relative  ">
+            <p id="factsdiv" class="text-center w-3/4 ease-in duration-1000">27 FootBall Fields of Forests Cleared</p>
+            
         </div>
     </div>
 
@@ -140,9 +158,18 @@
         </defs>
     </svg>
 
-
+<!-- cards -->
+    <div id="cards" class="flex text-center flex-col gap-4  mx-auto mt-20  w-[70%] lg:hidden font-semibold">
+        <h3 class="text-3xl ">Globally Every Minute</h3>
+        <div id="card1" class="bg-white text-black rounded-lg min-h-16  p-5"><p>27 football fields of forest cleared</p></div>
+        <div id="card2" class="bg-white text-black rounded-lg min-h-16 p-5"><p>2.4 million pounds of carbon dioxide released</p></div>
+        <div id="card3" class="bg-white text-black rounded-lg min-h-16 p-5"><p>Over 3,000 tons of plastic waste enter the oceans</p></div>
+        <div id="card3" class="bg-white text-black rounded-lg min-h-16 p-5"><p>60 Species go extinct</p></div>
+    </div>
 
     <script defer src="app.js"></script>
+   
+    
 </body>
 
 </html>
