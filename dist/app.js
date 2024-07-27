@@ -1,6 +1,55 @@
+/***********************************nav-dropdown******************************************* */
+
+// hamburger animate
+
+const hamburger= document.querySelector('#bars')
+const navdrop=document.querySelector('#navdrop')
+const topbar=document.querySelector('#topbar')
+const navsvg=document.querySelector('#svg1')
+console.log(navsvg)
 
 
+hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('change')
+    navdrop.classList.toggle('drop')
+    
+    const currentColor = getComputedStyle(topbar).backgroundColor;
+    console.log(currentColor)
+   
+    if(currentColor=="rgb(255, 255, 255)"){
 
+        topbar.style.backgroundColor = '#031806'
+        navsvg.setAttribute('fill', '#031806')
+    }
+    else{
+        topbar.style.backgroundColor = "white"
+        navsvg.setAttribute('fill', 'white')
+    } 
+        
+  
+})
+
+
+    // Get the current URL path
+    const path = window.location.pathname;
+    
+
+    // Extract the filename 
+    const page = path.split('/').pop();
+    
+
+    // Select all navigation links
+    const navItems = document.querySelectorAll('#navitems li');
+    
+
+    navItems.forEach(item => {
+        
+        const link = item.querySelector('a').getAttribute('href');
+         if (link === page) {
+            item.classList.add('active');            
+        }
+        
+    });
 
 
 
@@ -58,4 +107,25 @@
 
 
         setInterval(checkAngle, 1000); // Run checkAngle every 111ms (360 degrees / 40s = 9 degrees/s)
+
+/************************************the facts box content change******************************* */
+
+let facts=[" 27 football fields of forest cleared","2.4 million pounds of carbon dioxide released","Sea levels rise by 0.2 milimiters","consume  60,000 barrels of oil","Over 3,000 tons of plastic waste enter the oceans","Approximately 1 million tons of ice melt from the Greenland ice sheet","The ocean absorbs 2.5 million tons of carbon dioxide","Around 5,000 hectares of wetlands are drained","about 100,000 liters of freshwater are consumed","60 Species go Extinct" ]
+const factsbox= document.querySelector('#factsdiv')
+let x=0;
+
+changetext();
+
+function changetext(){    
+    
+      factsbox.innerText= facts[x]
+      x=(x+1) % facts.length;
+      
+
+    }
+
+setInterval(changetext,5000)
+
+
+
 

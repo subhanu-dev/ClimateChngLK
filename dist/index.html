@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPOWER Climate ACTION!</title>
-   <link rel="icon" type="jpg/img" href="images/">
+    <title>Empower Climate ACTION!</title>
+    <link rel="icon" type="jpg/img" href="images/">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,60 +16,133 @@
 </head>
 
 <body class="font-space text-white bg-darkgreen-0 ">
-    <nav>
-        <div class="w-screen hidden sm:block absolute h-5 -top-3 bg-white"></div>
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl ">ClimateChngLK</h1>
 
-        <div id="bars" class="absolute top-10 right-5 sm:top-5 sm:right-14 z-20 cursor-pointer ">
+    <!-- ----------------------------------------------------------------nav--------------------------------------------------------------- -->
+
+    <nav>
+        <div id="topbar" class="w-screen hidden sm:block absolute h-5 -top-3 bg-white z-40"></div>
+        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl ">ClimateChngLK
+        </h1>
+
+        <div id="bars" class="absolute top-10 right-5 sm:top-5 sm:right-14 z-50 cursor-pointer ">
             <div id="bar1" class="w-5 sm:w-7 mt-1 h-1  bg-white sm:bg-black rounded-sm duration-300"></div>
             <div id="bar2" class="w-5 sm:w-7 mt-1 h-1 bg-white sm:bg-black rounded-sm duration-300"></div>
             <div id="bar3" class="w-5 sm:w-7 mt-1 h-1 bg-white sm:bg-black rounded-sm duration-300"></div>
         </div>
 
     </nav>
-    <svg id="navbtn-svg" class="absolute hidden sm:block -top-8 -right-16 overflow-hidden  " width="200" height="250" viewbox="0,0,400,400" xmlns="http://www.w3.org/2000/svg" >
+    <svg id="navbtn-svg" class="absolute hidden sm:block -top-8 -right-16 overflow-hidden z-40" width="200" height="250"
+        viewbox="0,0,400,400" xmlns="http://www.w3.org/2000/svg">
+
+        <path
+            d="M184.101 112.026C183.519 126.717 171.513 138.466 156.811 138.466H111.046C95.5194 138.466 82.7492 126.251 82.1492 110.736C81.2988 88.7489 80.2793 59.4738 80.2793 45.5C80.2793 21.5295 0 21.5295 0 21.5295V0H137.529H271.279V21.5295C271.279 21.5295 200 17 190.279 45.5C186.919 55.3515 185.046 88.1683 184.101 112.026Z"
+            fill="white" id="svg1" />
+
+    </svg>
+
+    <!-- -----------------------------navdrop-------------------------------------------- -->
+
+    <div id="navdrop"
+        class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out ">
+        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">ClimateChngLK
+        </h1>
+        <ul id="navitems" class="text-gray-500 mt-40 self-end text-4xl pr-20 font-bold">
+            <li class="text-end">
+                 <a href="index.html" class="hover:text-gray-600 duration-100"> Home</a>
+            </li>
+            <li class="text-end"> <a href="action.html" class="hover:text-gray-600 duration-100">Action </a></li>
+            <li class="text-end"> <a href="analytics.html" class="hover:text-gray-600 duration-100">Analytics</a></li>
+            <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
+
+        </ul>
         
-        <path d="M184.101 112.026C183.519 126.717 171.513 138.466 156.811 138.466H111.046C95.5194 138.466 82.7492 126.251 82.1492 110.736C81.2988 88.7489 80.2793 59.4738 80.2793 45.5C80.2793 21.5295 0 21.5295 0 21.5295V0H137.529H271.279V21.5295C271.279 21.5295 200 17 190.279 45.5C186.919 55.3515 185.046 88.1683 184.101 112.026Z" fill="white"/>
-            
-
-</svg>
-<main class="lg:grid grid-cols-2 w-[75%] mx-auto font-bold items-center mt-5 p-5">
-
-    <div id="content" class="">
-        <h1 class="text-center lg:text-start text-4xl md:text-5xl lg:text-6xl">The Climate Clock <br>is TICkING</h1>
-        <h2 class=" hidden lg:block text-2xl">And You Think <span class="font-sinhala">ශ්‍රීලංකා </span> is Immune?</h2>
-        <p class="hidden lg:block max-w-96 font-medium mt-2">Harness the power of knowledge and action to combat climate change. Discover what you can do today for a sustainable tomorrow.</p>
-        <a href="analytics.html"  class="hidden lg:block">
-            <div id="button" class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300"><span class="relative z-20">Start Here</span>
-            <div id="circles" class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 inset-0 -top-6 -left-6 blur-sm duration-500  "></div></div>
-        </a>
     </div>
-    <div id="images" class="relative">
-        <img src="images\globe img.png" alt="globe image" class="max-w-[500px] w-full min-w-60 sm:justify-self-center my-10 lg:my-0 lg:ml-20 globerotation" id="globe">
-        <div id="blurred" class="rounded-full bg-white absolute w-20 sm:w-40 md:w-80 h-80 top-[15%] left-[20%] lg:left-[25%] -z-20 blur-3xl"></div>
-        <img src="images/callout freeze.png" alt="callouts" class="absolute max-w-16 md:max-w-36 lg:max-w-20 top-5 right-10  callout duration-700"  id="callout-freeze">
-        <img src="images/callout heat.png" alt="callouts" class="absolute max-w-16 md:max-w-36 lg:max-w-20  right-0 bottom-10 callout duration-700" id="callout-heat">
-        <img src="images/callout tree.png" alt="callouts" class="absolute  max-w-16 md:max-w-36 lg:max-w-20  top-20 left-20 callout duration-700" id="callout-tree">
 
+
+    <!-- -----------------------------------------Hero---------------------------------------------------------------------------- -->
+
+    <main class="lg:grid grid-cols-2 w-[75%] mx-auto font-bold items-center mt-5 p-5">
+
+        <div id="content" class="">
+            <h1 class="text-center lg:text-start text-4xl md:text-5xl lg:text-6xl">The Climate Clock <br>is TICkING</h1>
+            <h2 class=" hidden lg:block text-2xl">And You Think <span class="font-sinhala">ශ්‍රීලංකා </span> is Immune?
+            </h2>
+            <p class="hidden lg:block max-w-96 font-medium mt-2">Harness the power of knowledge and action to combat
+                climate change. Discover what you can do today for a sustainable tomorrow.</p>
+            <a href="analytics.html" class="hidden lg:block">
+                <div id="button"
+                    class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300">
+                    <span class="relative z-20">Start Here</span>
+                    <div id="circles"
+                        class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 inset-0 -top-6 -left-6 blur-sm duration-500  ">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="images" class="relative">
+            <img src="images\globe img.png" alt="globe image"
+                class="max-w-[500px] w-full min-w-60 sm:justify-self-center my-10 lg:my-0 lg:ml-20 globerotation"
+                id="globe">
+            <div id="blurred"
+                class="rounded-full bg-white absolute w-20 sm:w-40 md:w-80 h-80 top-[15%] left-[20%] lg:left-[25%] -z-20 blur-3xl">
+            </div>
+            <img src="images/callout freeze.png" alt="callouts"
+                class="absolute max-w-16 md:max-w-36 lg:max-w-20 top-5 right-10  callout duration-700"
+                id="callout-freeze">
+            <img src="images/callout heat.png" alt="callouts"
+                class="absolute max-w-16 md:max-w-36 lg:max-w-20  right-0 bottom-10 callout duration-700"
+                id="callout-heat">
+            <img src="images/callout tree.png" alt="callouts"
+                class="absolute  max-w-16 md:max-w-36 lg:max-w-20  top-20 left-20 callout duration-700"
+                id="callout-tree">
+
+        </div>
+
+
+        <div id="for-mobile" class="flex justify-center items-center flex-col lg:hidden mt-16">
+            <h2 class="text-center lg:text-start text-2xl ">And You Think <span
+                    class="font-sinhala font-semibold">ශ්‍රීලංකා </span> is Immune?</h2>
+            <a href="analytics.html">
+                <div id="button"
+                    class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300">
+                    <span class="relative z-20">Start Here</span>
+                    <div id="circles"
+                        class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 inset-0 -top-6 -left-6 blur-sm duration-500  ">
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <div id="factsbar" class=" justify-center items-center hidden lg:flex mt-10 gap-10">
+        <p class="text-3xl font-bold">Every Minute Globally</p>
+        <div
+            class=" h-20 w-96 rounded-lg factsBox factsShadow flex items-center justify-center text-black text-base font-semibold ">
+            <p id="factsdiv" class="fadeinfade text-center w-3/4">27 FootBall Fields of Forests Cleared</p>
+        </div>
     </div>
-<div id="for-mobile" class="flex justify-center items-center flex-col lg:hidden mt-16">    
-        <h2 class="text-center lg:text-start text-lg md:text-2xl">And You Think <span class="font-sinhala font-semibold">ශ්‍රීලංකා </span> is Immune?</h2>
-        <a href="analytics.html">
-            <div id="button" class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300"><span class="relative z-20">Start Here</span>
-            <div id="circles" class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 inset-0 -top-6 -left-6 blur-sm duration-500  "></div></div>
-        </a>
-</div>
-</main>
 
-<div id="factsbar" class=" justify-center items-center hidden lg:flex mt-10 gap-10">
-    <p class="text-4xl font-bold">Every Minute Globally</p>
-    <div id="factsdiv" class="h-20 w-96 rounded-md bg-yellow-500"></div>
-</div>
+    </main>
 
-</main>
+    <!----------- greenish gradient svg element------------- -->
+    <svg width="1197" height="310" viewBox="0 0 1197 310" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="hidden lg:block absolute bottom-2 -z-10">
+        <g filter="url(#filter0_f_695_119)">
+            <ellipse cx="598.5" cy="280" rx="398.5" ry="80" fill="#3B8319" />
+        </g>
+        <defs>
+            <filter id="filter0_f_695_119" x="0" y="0" width="1197" height="560" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_695_119" />
+            </filter>
+        </defs>
+    </svg>
 
 
-<script defer src="app.js"></script>
+
+    <script defer src="app.js"></script>
 </body>
 
 </html>

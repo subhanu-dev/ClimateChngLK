@@ -67,3 +67,76 @@ box-shadow: 2px 1px 3px white;
     clip-path: circle(20rem at center);
 }
 
+.factsBox{
+    background-image: linear-gradient(120deg,White, yellow);
+}
+
+.factsShadow{
+    box-shadow:-2px 2px 5px white;
+}
+
+.fadeinfade{
+    animation:fadeinfadeout 5s ease-in-out infinite 
+}
+
+@keyframes fadeinfadeout{
+    0%{
+        opacity:0;
+    }
+    40%{
+        opacity:1;
+    }
+
+    90%,100%{
+        opacity:0;
+    }
+}
+
+
+
+
+/* hamburger menu change */
+.change #bar1{
+    transform: rotate(45deg) translateX(5px) translateY(5px);
+    background-color: white;
+}  
+  
+.change #bar2{
+    opacity:0;
+  }
+  
+.change #bar3{
+    transform: rotate(-45deg) translateY(-8px) translateX(5px);
+    background-color: white;
+}
+ 
+.drop{
+    transform:translateY(0%);
+}
+
+.active{
+    @apply text-black;
+    height:25%;
+}
+
+.active:after{
+    content: '';
+    display: block;
+    position: relative;
+    border-left: 15px solid transparent;
+      border-left-width: 15px;
+      border-left-style: solid;
+      border-left-color: transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid rgb(0, 0, 0);
+    z-index: 2;
+    left: 11rem;
+    bottom: 1.7rem;
+    width: 2px;
+    rotate: 90deg;
+}
+
+.displacement{
+    filter:url(#displacement);
+}
+
