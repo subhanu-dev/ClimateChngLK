@@ -1,4 +1,4 @@
-/***********************************nav-dropdown******************************************* */
+/************************************************nav-dropdown******************************************* */
 
 // hamburger animate
 
@@ -35,12 +35,32 @@ tl.to("#animatedCircle1", {
 
 // hamburger icon dropping down the nav section and related changes
 
+
 hamburger.addEventListener('click', function(){
-    hamburger.classList.toggle('change')
+   
+    //bringing the navbar down
     navdrop.classList.toggle('drop')
-    
-    const currentColor = getComputedStyle(topbar).backgroundColor;
-        
+
+        // checking the size of the window
+        const screenWidth = window.innerWidth;
+        // if screenwidth is less than 800, the hamburger wont turn into white in transition
+            if (screenWidth>640){
+                hamburger.classList.toggle('change')               
+            }
+            
+            else{
+                hamburger.classList.toggle('smallerChange')
+
+                //setting the noscroll class on the root html element.
+                document.documentElement.classList.toggle('noscroll')
+                
+            }
+            
+              
+            
+           
+    // changing the color of the top svg bar elements based on the current color.
+    const currentColor = getComputedStyle(topbar).backgroundColor;        
    
     if(currentColor=="rgb(255, 255, 255)"){
 
@@ -48,17 +68,27 @@ hamburger.addEventListener('click', function(){
         navsvg.setAttribute('fill', '#031806')
         
     }
+
     else{
         topbar.style.backgroundColor = "white"
+        
         navsvg.setAttribute('fill', 'white')
+        
      } 
 
     // playing the gsap animations by activating
+
+
     tl.play();
    
   
 })
 
+
+
+
+
+// adding icon to the active page
 
     // Get the current URL path
     const path = window.location.pathname;
@@ -84,7 +114,7 @@ hamburger.addEventListener('click', function(){
 
 
 
-/*********************************globe tooltip sync ******************************** */
+/*******************************************globe tooltip sync ********************************************** */
 
 
         //loading the tooltip
@@ -142,7 +172,7 @@ hamburger.addEventListener('click', function(){
 
         
 
-/************************************the facts box content change******************************* */
+/*********************************************the facts box content change************************************************************* */
 
 let facts=[" 27 football fields of forest cleared","2.4 million pounds of carbon dioxide released","Sea levels rise by 0.2 milimiters","consume  60,000 barrels of oil","Over 3,000 tons of plastic waste enter the oceans","Approximately 1 million tons of ice melt from the Greenland ice sheet","The ocean absorbs 2.5 million tons of carbon dioxide","Around 5,000 hectares of wetlands are drained","about 100,000 liters of freshwater are consumed","60 Species go Extinct" ]
 const factsbox= document.querySelector('#factsdiv')
@@ -170,5 +200,41 @@ setInterval(changetext,5000)
 
 
 
-/************************************************************GSAP Animations******************************************************** */
+/************************************************************Scoll into View******************************************************** */
+
+//scroll into view
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry)=> {
+        
+    
+    if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        
+    }
+    else{
+        entry.target.classList.remove('show');
+    }
+
+})
+});
+
+const hiddenElements = document.querySelectorAll('.card');
+hiddenElements.forEach((el)=>observer.observe(el));
+
+
+// for the quotes
+const quoteElement = document.querySelector('#quotes');
+
+const observer2 = new IntersectionObserver(entries => {
+    
+    entries.forEach(entry => {
+        
+        if (entry.isIntersecting) {
+            quoteElement.classList.add('visible');
+            observer2.unobserve(entry.target);  // Unobserve after first intersection
+        }
+    });
+});
+
+observer2.observe(quoteElement);
 

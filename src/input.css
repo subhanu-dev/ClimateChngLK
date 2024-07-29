@@ -12,6 +12,14 @@ html, :root{
     
     
 }
+
+/*noscroll class added with js  */
+
+.noscroll{
+    overflow:hidden;
+}
+
+
 #navbtn-svg{
      /* background-color: aqua; */
 }
@@ -146,12 +154,37 @@ animation:bluranimation 10s linear infinite;
         transform:scale(1)
     }
     }
- 
+
+    /* card animations */
+.card{
+    @apply bg-white text-black rounded-lg min-h-16 p-5  opacity-0;
+    transition:all 2s ease-in;
+    transform: translateX(-80px);
+     
+}
+
+.show{
+    opacity:1;
+    transform: translateX(0px);
+}
+
+
+.visible{
+    opacity:1;
+}
+
+@media(prefers-reduced-motion){
+    .card{
+        transition:none;
+    }
+}
+
 
 /* hamburger menu change */
 .change #bar1{
     transform: rotate(45deg) translateX(5px) translateY(5px);
     background-color: white;
+    
 }  
   
 .change #bar2{
@@ -163,6 +196,23 @@ animation:bluranimation 10s linear infinite;
     background-color: white;
 }
  
+
+.smallerChange #bar1{   
+    transform: rotate(45deg) translateX(5px) translateY(5px);
+    background-color:#031806 ;
+    
+}
+
+.smallerChange #bar2{ 
+    opacity:0;
+}  
+
+.smallerChange #bar3{
+    transform: rotate(-45deg) translateY(-8px) translateX(5px);
+    background-color: #031806;
+}
+
+
 .drop{
     transform:translateY(0%);
 }
@@ -193,10 +243,6 @@ animation:bluranimation 10s linear infinite;
     filter:url(#displacement);
 }
 
-#svgcontainer{
-
-
-}
 
 
 

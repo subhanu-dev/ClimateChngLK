@@ -32,7 +32,7 @@
         <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl ">ClimateChngLK
         </h1>
 
-        <div id="bars" class="absolute top-10 right-5 sm:top-5 sm:right-14 z-50 cursor-pointer ">
+        <div id="bars" class="absolute top-10 right-6 sm:top-5 sm:right-14 z-50 cursor-pointer ">
             <div id="bar1" class="w-5 sm:w-7 mt-1 h-1  bg-white sm:bg-black rounded-sm duration-300"></div>
             <div id="bar2" class="w-5 sm:w-7 mt-1 h-1 bg-white sm:bg-black rounded-sm duration-300"></div>
             <div id="bar3" class="w-5 sm:w-7 mt-1 h-1 bg-white sm:bg-black rounded-sm duration-300"></div>
@@ -154,7 +154,7 @@
     <div id="factsbar" class=" justify-center items-center hidden lg:flex mt-10 gap-10">
         <p class="text-3xl font-bold">Every Minute Globally</p>
         <div
-            class=" h-20 w-96 rounded-lg factsBox factsShadow flex items-center justify-center text-black text-base font-semibold  relative  ">
+            class=" h-20 w-96 rounded-lg factsBox factsShadow flex items-center justify-center text-black text-base font-semibold  relative lg:mt-5 xl:-mt-2 ">
             <p id="factsdiv" class="text-center w-3/4 ease-in duration-1000">27 FootBall Fields of Forests Cleared</p>
             
         </div>
@@ -183,10 +183,10 @@
 
     <div id="cards" class="flex text-center flex-col gap-4  mx-auto mt-20  w-[70%] lg:hidden font-semibold">
         <h3 class="text-3xl ">Globally Every Minute</h3>
-        <div id="card1" class="bg-white text-black rounded-lg min-h-16  p-5"><p>27 football fields of forest cleared</p></div>
-        <div id="card2" class="bg-white text-black rounded-lg min-h-16 p-5"><p>2.4 million pounds of carbon dioxide released</p></div>
-        <div id="card3" class="bg-white text-black rounded-lg min-h-16 p-5"><p>Over 3,000 tons of plastic waste enter the oceans</p></div>
-        <div id="card3" class="bg-white text-black rounded-lg min-h-16 p-5"><p>60 Species go extinct</p></div>
+        <div id="card1" class="card delay-200"><p>27 football fields of forest cleared</p></div>
+        <div id="card2" class="card delay-300"><p>2.4 million pounds of carbon dioxide released</p></div>
+        <div id="card3" class="card delay-500"><p>Over 3,000 tons of plastic waste enter the oceans</p></div>
+        <div id="card3" class="card delay-700"><p>60 Species go extinct</p></div>
     </div>
 
 
@@ -199,12 +199,17 @@
     <path d="M55.4748 49.5741C122.867 -20.8831 242.977 -15.3702 323.749 61.8876C404.521 139.145 415.368 258.892 347.976 329.349C280.585 399.807 136.986 540.897 56.2137 463.639C-24.5584 386.381 -11.9169 120.031 55.4748 49.5741Z" fill="#9AAC34"/>
     
     </svg> 
+    
 </div>
-<img src="images/quotes.png" alt="quotes" class="max-w-20 w-full ml-20 ">
-<p class=" text-end max-w-[70%] mx-auto z-30 text-xl pt-7  font-semibold">The science is clear: The impacts of climate change are no longer subtle. They are playing out in real time, and we are seeing them unfold in the form of unprecedented weather extremes.</p>
-    <a href="https://michaelmann.net/" target="_blank">
-        <p class="text-end pr-[15%] mt-5 mx-auto  text-lg font-bold">Dr. Michael E. Mann</p>
-    </a>
+<div id="quotes" class="duration-[2s] delay-700 opacity-0">
+
+    <img src="images/quotes.png" alt="quotes" class="max-w-20 w-full ml-20 ">
+    <p class=" text-end max-w-[70%] mx-auto z-30 text-xl pt-7  font-semibold">The science is clear: The impacts of climate change are no longer subtle. They are playing out in real time, and we are seeing them unfold in the form of unprecedented weather extremes.</p>
+        <a href="https://michaelmann.net/" target="_blank">
+            <p class="text-end pr-[15%] mt-5 mx-auto  text-lg font-bold hover:text-waterdarkblue-0 active:text-waterdarkblue-0duration-300">Dr. Michael E. Mann</p>
+        </a>
+
+</div>
 </figure>
 
 <section id="banaAndButton" class="lg:hidden flex flex-col justify-center items-center md:flex-row gap-2 mt-[80%] sm:mt-40 sm:pt-0">
@@ -222,18 +227,20 @@
 
 </section>
 
-<footer class="px-4 bg-white lg:hidden mt-20"> 
-    <img src="images/globe img.png" alt="globe images" class="absolute bottom-0">
-<div id="socials" class="mt-4">
-    <p class="font-semibold">Follow us @</p>
+<footer class="px-4 bg-white lg:hidden mt-20 relative overflow-hidden"> 
+    
+<div id="socials" class="mt-3 ">
+   
     <i class="fa-brands fa-facebook-f text-bggreen-0  mx-1"></i>
     <i class="fa-brands fa-twitter text-bggreen-0 mx-1"></i>
     <i class="fa-brands fa-square-instagram text-bggreen-0 mx-1"></i>
     <i class="fa-brands fa-linkedin-in text-bggreen-0 mx-1"></i>
     <i class="fa-brands fa-youtube text-bggreen-0 mx-1"></i>
-    <p class="text-sm pr-4 pb-1 lg:hidden text-darkgreen-0 "> &copy;ClimateChngLK</p>
+    <p class="text-sm pr-4 pb-1 mt-1  text-darkgreen-0 "> &copy;ClimateChngLK</p>
 </div>
+
 </footer>
+
 
 
 
