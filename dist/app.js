@@ -6,6 +6,12 @@ const hamburger= document.querySelector('#bars')
 const navdrop=document.querySelector('#navdrop')
 const topbar=document.querySelector('#topbar')
 const navsvg=document.querySelector('#svg1')
+const links= document.querySelectorAll('li a')
+
+
+
+
+
 
 // gsap animations
 
@@ -49,14 +55,17 @@ hamburger.addEventListener('click', function(){
             }
             
             else{
-                hamburger.classList.toggle('smallerChange')
-
-                //setting the noscroll class on the root html element.
-                document.documentElement.classList.toggle('noscroll')
+                hamburger.classList.toggle('smallerChange')                
                 
             }
+
+
+            if(screenWidth<800){
+
+            //setting the noscroll class on the root html element. applied it on the roothtml cuz 'document.body.style' settting didnt work.
+            document.documentElement.classList.toggle('noscroll')
             
-              
+            } 
             
            
     // changing the color of the top svg bar elements based on the current color.
@@ -84,8 +93,24 @@ hamburger.addEventListener('click', function(){
   
 })
 
-
-
+//making the link navigation happen after completing the animation
+for(let link of links){
+    link.addEventListener('click', function(subhanu){
+        subhanu.preventDefault();
+    
+        navdrop.classList.remove('drop');
+ 
+        // giving time for the transition to finish and then navigating to the link 
+        setTimeout(()=>
+        {
+            window.location.href = this.href;
+        },1000)    
+    
+    
+    
+    })
+    
+    }
 
 
 // adding icon to the active page
@@ -110,6 +135,8 @@ hamburger.addEventListener('click', function(){
         }
         
     });
+
+
 
 
 
