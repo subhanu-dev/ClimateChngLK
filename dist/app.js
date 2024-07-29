@@ -20,13 +20,13 @@ tl.to("#animatedCircle1", {
 }, "<")
 
 .to("#animatedCircle2", {
-    duration: 2,
+    duration: 3,
     attr: { r: 270 },
     ease: "power2.inOut"
 }, "<")
 
 .to("#animatedCircle3", {
-    duration: 2,
+    duration: 4,
     attr: { r: 200 },
     ease: "power2.inOut"
 }, "<")
@@ -152,10 +152,12 @@ changetext();
 
 function changetext(){
 
+    // letting it fade out while the other element is added
     factsbox.classList.add("fade-out")
     
     setTimeout(() => {
         factsbox.innerText = facts[x];
+        // removing it after changing the content
          factsbox.classList.remove('fade-out');
         x = (x + 1) % facts.length;
     }, 1000);
@@ -163,6 +165,7 @@ function changetext(){
 
     }
 
+    // running it every 5s
 setInterval(changetext,5000)
 
 

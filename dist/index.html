@@ -14,10 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/d89352fd46.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap" rel="stylesheet">
     <!-- importing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
+
+
 
 <body class="font-space text-white bg-darkgreen-0 ">
 
@@ -59,10 +63,11 @@
             <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
 
         </ul>
+
 <div id="svgwrapper" class="relative bottom-60 hidden lg:block ">    
             <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none" xmlns="http://www.w3.org/2000/svg" class=" absolute">
                 
-                <circle  cx="-20" cy="300" r="300" fill="#031806" id="animatedCircle1"></circle>
+                <circle  cx="-20" cy="300" r="250" fill="#031806" id="animatedCircle1"></circle>
                 <circle  cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
                 <circle  cx="-50" cy="300" r="150" fill="#226A7F"id="animatedCircle3" ></circle>
                 </svg>
@@ -114,6 +119,21 @@
         </div>
 
 <!-- only for mobile screens  -->
+
+<!-- blue background svg behind globe -->
+<div id="wrapper">
+    
+    <svg class="absolute sm:hidden -z-50 left-0 top-40 " viewBox="0 0 412 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M412 226.5C412 285.871 315.207 350 247 350C178.793 350 0 331.371 0 272C0 212.629 244.793 0 313 0C381.207 0 412 167.129 412 226.5Z" fill="url(#paint0_linear_640_32)"/>
+        <defs>
+        <linearGradient id="paint0_linear_640_32" x1="25" y1="287" x2="327.5" y2="23.5" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#052933"/>
+        <stop offset="1" stop-color="#3DBFE5"/>
+        </linearGradient>
+        </defs>
+        </svg>
+</div>
+
         <div id="for-mobile" class="flex justify-center items-center gap-4 lg:hidden mt-16">
             <h2 class=" text-2xl ">And You Think <span
                     class="font-sinhala font-semibold">ශ්‍රීලංකා </span> is Immune?</h2>
@@ -134,7 +154,7 @@
     <div id="factsbar" class=" justify-center items-center hidden lg:flex mt-10 gap-10">
         <p class="text-3xl font-bold">Every Minute Globally</p>
         <div
-            class=" h-20 w-96 rounded-lg factsBox factsShadow flex items-center justify-center text-black text-base font-semibold overflow-hidden relative  ">
+            class=" h-20 w-96 rounded-lg factsBox factsShadow flex items-center justify-center text-black text-base font-semibold  relative  ">
             <p id="factsdiv" class="text-center w-3/4 ease-in duration-1000">27 FootBall Fields of Forests Cleared</p>
             
         </div>
@@ -144,7 +164,7 @@
 
     <!----------- greenish gradient svg element------------- -->
     <svg width="1197" height="310" viewBox="0 0 1197 310" fill="none" xmlns="http://www.w3.org/2000/svg"
-        class="hidden lg:block absolute bottom-2 -z-10">
+        class="hidden lg:block absolute bottom-0 -z-10">
         <g filter="url(#filter0_f_695_119)">
             <ellipse cx="598.5" cy="280" rx="398.5" ry="80" fill="#3B8319" />
         </g>
@@ -158,7 +178,9 @@
         </defs>
     </svg>
 
+
 <!-- cards -->
+
     <div id="cards" class="flex text-center flex-col gap-4  mx-auto mt-20  w-[70%] lg:hidden font-semibold">
         <h3 class="text-3xl ">Globally Every Minute</h3>
         <div id="card1" class="bg-white text-black rounded-lg min-h-16  p-5"><p>27 football fields of forest cleared</p></div>
@@ -167,8 +189,58 @@
         <div id="card3" class="bg-white text-black rounded-lg min-h-16 p-5"><p>60 Species go extinct</p></div>
     </div>
 
-    <script defer src="app.js"></script>
-   
+
+<!-- Quote -->
+
+<figure class="mt-40 lg:hidden">
+<div id="svgcontainer" class="relative sm:max-w-[80%]">
+    
+    <svg id="greenbgsvg" viewBox="0 0 420 500" fill="none" xmlns="http://www.w3.org/2000/svg" class="  absolute sm:hidden  sm:rotate-180  -z-10 -left-4 md:-top-80 rotate-12">
+    <path d="M55.4748 49.5741C122.867 -20.8831 242.977 -15.3702 323.749 61.8876C404.521 139.145 415.368 258.892 347.976 329.349C280.585 399.807 136.986 540.897 56.2137 463.639C-24.5584 386.381 -11.9169 120.031 55.4748 49.5741Z" fill="#9AAC34"/>
+    
+    </svg> 
+</div>
+<img src="images/quotes.png" alt="quotes" class="max-w-20 w-full ml-20 ">
+<p class=" text-end max-w-[70%] mx-auto z-30 text-xl pt-7  font-semibold">The science is clear: The impacts of climate change are no longer subtle. They are playing out in real time, and we are seeing them unfold in the form of unprecedented weather extremes.</p>
+    <a href="https://michaelmann.net/" target="_blank">
+        <p class="text-end pr-[15%] mt-5 mx-auto  text-lg font-bold">Dr. Michael E. Mann</p>
+    </a>
+</figure>
+
+<section id="banaAndButton" class="lg:hidden flex flex-col justify-center items-center md:flex-row gap-2 mt-[80%] sm:mt-40 sm:pt-0">
+    <p class="text-xl font-bold px-4 text-center">It’s all about Saving the Planet for the Future 
+        Generations.</p>
+        <a href="action.html">
+            <div id="button"
+                        class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300">
+                        <span class="relative z-20">Take Action</span>
+                        <div id="circles"
+                            class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 -bottom-6 -right-6 blur-sm duration-500  ">
+                        </div>
+                    </div>
+        </a>
+
+</section>
+
+<footer class="px-4 bg-white lg:hidden mt-20"> 
+    <img src="images/globe img.png" alt="globe images" class="absolute bottom-0">
+<div id="socials" class="mt-4">
+    <p class="font-semibold">Follow us @</p>
+    <i class="fa-brands fa-facebook-f text-bggreen-0  mx-1"></i>
+    <i class="fa-brands fa-twitter text-bggreen-0 mx-1"></i>
+    <i class="fa-brands fa-square-instagram text-bggreen-0 mx-1"></i>
+    <i class="fa-brands fa-linkedin-in text-bggreen-0 mx-1"></i>
+    <i class="fa-brands fa-youtube text-bggreen-0 mx-1"></i>
+    <p class="text-sm pr-4 pb-1 lg:hidden text-darkgreen-0 "> &copy;ClimateChngLK</p>
+</div>
+</footer>
+
+
+
+
+
+
+<script defer src="app.js"></script> 
     
 </body>
 

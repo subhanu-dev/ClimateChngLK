@@ -10,6 +10,7 @@
 html, :root{
     overflow-x:hidden;
     
+    
 }
 #navbtn-svg{
      /* background-color: aqua; */
@@ -191,4 +192,18 @@ animation:bluranimation 10s linear infinite;
 .displacement{
     filter:url(#displacement);
 }
+
+#svgcontainer{
+
+
+}
+
+
+
+#greenbgsvg{
+    /* background-color: darkorange;  */
+    /* width:100%; */
+   
+}
+
 
