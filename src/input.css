@@ -91,6 +91,18 @@ box-shadow: 2px 1px 3px white;
     opacity: 0;
 }
 
+/*Hue Filter on the globe*/
+
+
+#globe:hover{
+    filter:sepia(90%)
+}
+
+
+
+
+
+
 /* doing the fade in fade out with the following class and animation makes certain inconsistencies in changing */
 
 
