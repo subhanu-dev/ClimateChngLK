@@ -3,64 +3,66 @@
 @tailwind utilities;
 
 
-*{
+* {
     /* outline:1px solid red; */
 }
 
-html, :root{
-    overflow-x:hidden;
-    
-    
+html,
+:root {
+    overflow-x: hidden;
+
+
 }
 
 /*noscroll class added with js  */
 
-.noscroll{
-    overflow:hidden;
+.noscroll {
+    overflow: hidden;
 }
 
 
-#navbtn-svg{
-     /* background-color: aqua; */
+#navbtn-svg {
+    /* background-color: aqua; */
 }
 
-#bars:hover :nth-child(1){
-   height:5px
-   
+#bars:hover :nth-child(1) {
+    height: 5px
 }
-#bars:hover :nth-child(2){
-   height:5px
+
+#bars:hover :nth-child(2) {
+    height: 5px
 }
-#bars:hover :nth-child(3){
-   height:5px
+
+#bars:hover :nth-child(3) {
+    height: 5px
 }
 
 
 
-.btnshadow{
-box-shadow: 2px 1px 3px white;
+.btnshadow {
+    box-shadow: 2px 1px 3px white;
 }
 
 /* #button:hover
 {
     box-shadow: 3px 2px 5px white;
 } */
-#button:hover #circles{
-    width:80px;
-    height:80px;
+#button:hover #circles {
+    width: 80px;
+    height: 80px;
 }
 
-.globerotation{
+.globerotation {
     animation: rotate 40s linear infinite;
 }
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg) ;
+        transform: rotate(0deg);
     }
 
     50% {
-        transform: rotate(180deg) ;
+        transform: rotate(180deg);
     }
 
     100% {
@@ -69,23 +71,24 @@ box-shadow: 2px 1px 3px white;
 
 }
 
-.callout{
+.callout {
     clip-path: circle(0rem at center);
 }
+
 .tooltip-show {
     clip-path: circle(20rem at center);
 }
 
 /************** factsbox****** */
-.factsBox{
-    background-image: linear-gradient(120deg,White, yellow);
+.factsBox {
+    background-image: linear-gradient(120deg, White, yellow);
 }
 
-.factsShadow{
-    box-shadow:-2px 2px 5px white;
+.factsShadow {
+    box-shadow: -2px 2px 5px white;
 }
 
-     
+
 
 .fade-out {
     opacity: 0;
@@ -94,13 +97,27 @@ box-shadow: 2px 1px 3px white;
 /*Hue Filter on the globe*/
 
 
-#globe:hover{
-    filter:sepia(90%)
+#globe:hover {
+    filter: sepia(90%)
 }
 
+/******************************************************************Preloader********************************************************************/
 
+.loader {
+    position: fixed;
+    z-index: 100;
+    background: #031806 url('images/loading.gif') no-repeat center center;
+    height: 100vh;
+    width: 100vw;
+    background-size: 7%;
+    inset: 0;
+    transition: all 1s;
+    overflow-y: hidden;
+}
 
-
+.preloader-off {
+    opacity: 0;
+}
 
 
 /* doing the fade in fade out with the following class and animation makes certain inconsistencies in changing */
@@ -125,11 +142,11 @@ box-shadow: 2px 1px 3px white;
 
  */
 
- /* came up with this animation to reveal facts instead */
+/* came up with this animation to reveal facts instead */
 
- /* nope this doesnt work either... tried having a block moving over to do a reveal effect*/
+/* nope this doesnt work either... tried having a block moving over to do a reveal effect*/
 
- /* .revealAnimation{
+/* .revealAnimation{
     animation: reveal 5s ease-in-out infinite;
     background-image: linear-gradient(120deg,White, yellow);
  }
@@ -150,118 +167,117 @@ box-shadow: 2px 1px 3px white;
 
 
 /* blur animation for the globes background white blur */
- .bluranimation{
-animation:bluranimation 10s linear infinite;
- }
-
- @keyframes  bluranimation{
-    from
-    {
-        transform:scale(1)
-    }
-    50%{
-        transform:scale(1.1)
-    }
-    to{
-        transform:scale(1)
-    }
-    }
-
-    /* card animations */
-.card{
-    @apply bg-white text-black rounded-lg min-h-16 p-5  opacity-0;
-    transition:all 2s ease-in;
-    transform: translateX(-80px);
-     
+.bluranimation {
+    animation: bluranimation 10s linear infinite;
 }
 
-.show{
-    opacity:1;
+@keyframes bluranimation {
+    from {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.1)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+
+
+/* card animations */
+.card {
+    @apply bg-white text-black rounded-lg min-h-16 p-5 opacity-0;
+    transition: all 2s ease-in;
+    transform: translateX(-80px);
+
+}
+
+.show {
+    opacity: 1;
     transform: translateX(0px);
 }
 
 
-.visible{
-    opacity:1;
+.visible {
+    opacity: 1;
 }
 
-@media(prefers-reduced-motion){
-    .card{
-        transition:none;
+@media(prefers-reduced-motion) {
+    .card {
+        transition: none;
     }
 }
 
 
 /* hamburger menu change */
-.change #bar1{
+.change #bar1 {
     transform: rotate(45deg) translateX(5px) translateY(5px);
     background-color: white;
-    
-}  
-  
-.change #bar2{
-    opacity:0;
-  }
-  
-.change #bar3{
+
+}
+
+.change #bar2 {
+    opacity: 0;
+}
+
+.change #bar3 {
     transform: rotate(-45deg) translateY(-8px) translateX(5px);
     background-color: white;
 }
- 
 
-.smallerChange #bar1{   
+
+.smallerChange #bar1 {
     transform: rotate(45deg) translateX(5px) translateY(5px);
-    background-color:#031806 ;
-    
+    background-color: #031806;
+
 }
 
-.smallerChange #bar2{ 
-    opacity:0;
-}  
+.smallerChange #bar2 {
+    opacity: 0;
+}
 
-.smallerChange #bar3{
+.smallerChange #bar3 {
     transform: rotate(-45deg) translateY(-8px) translateX(5px);
     background-color: #031806;
 }
 
 
-.drop{
-    transform:translateY(0%);
+.drop {
+    transform: translateY(0%);
 }
 
-.active{
+.active {
     @apply text-black;
-    height:25%;
+    height: 25%;
 }
 
-.active:after{
+.active:after {
     content: '';
     display: block;
     position: relative;
     border-left: 15px solid transparent;
-      border-left-width: 15px;
-      border-left-style: solid;
-      border-left-color: transparent;
+    border-left-width: 15px;
+    border-left-style: solid;
+    border-left-color: transparent;
     border-right: 15px solid transparent;
     border-top: 20px solid rgb(0, 0, 0);
     z-index: 2;
-    left: 11rem;
+    left: 14rem;
     bottom: 1.7rem;
     width: 2px;
     rotate: 90deg;
 }
 
-.displacement{
-    filter:url(#displacement);
-}
+/* .displacement {
+    filter: url(#displacement);
+} */
 
 
-
-
-#greenbgsvg{
+#greenbgsvg {
     /* background-color: darkorange;  */
     /* width:100%; */
-   
+
 }
-
-

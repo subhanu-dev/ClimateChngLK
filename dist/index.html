@@ -58,6 +58,7 @@
             <li class="text-end">
                  <a href="index.html" class="hover:text-gray-600 duration-100"> Home</a>
             </li>
+            <li class="text-end"> <a href="whats.html" class="hover:text-gray-600 duration-100">What's That </a></li>
             <li class="text-end"> <a href="action.html" class="hover:text-gray-600 duration-100">Action </a></li>
             <li class="text-end"> <a href="analytics.html" class="hover:text-gray-600 duration-100">Analytics</a></li>
             <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
@@ -75,7 +76,9 @@
 </div>
             
     </div>
-
+<!-- preloader -->
+    <div id="preloader" class="loader">
+     </div>
 
     <!-- -----------------------------------------Hero---------------------------------------------------------------------------- -->
 
@@ -162,6 +165,8 @@
 
     </main>
 
+
+
     <!----------- greenish gradient svg element------------- -->
     <svg width="1197" height="310" viewBox="0 0 1197 310" fill="none" xmlns="http://www.w3.org/2000/svg"
         class="hidden lg:block absolute bottom-0 -z-10">
@@ -227,9 +232,8 @@
 
 </section>
 
-<footer class="px-4 bg-white lg:hidden mt-20 relative overflow-hidden"> 
-    
-<div id="socials" class="mt-3 ">
+<footer class="px-4 bg-white mt-20 lg:hidden relative overflow-hidden "> 
+   <div id="socials" class="mt-3 lg:hidden ">
    
     <i class="fa-brands fa-facebook-f text-bggreen-0  mx-1"></i>
     <i class="fa-brands fa-twitter text-bggreen-0 mx-1"></i>
@@ -241,11 +245,7 @@
 
 </footer>
 
-
-
-
-
-
+<div class="hidden lg:block  bg-white mt-6 h-1"></div>
 
 <script defer src="app.js"></script> 
     
