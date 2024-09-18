@@ -11,11 +11,9 @@ html,
 :root {
     overflow-x: hidden;
 
-
 }
 
 /*noscroll class added with js  */
-
 .noscroll {
     overflow: hidden;
 }
@@ -280,4 +278,9 @@ html,
     /* background-color: darkorange;  */
     /* width:100%; */
 
+}
+
+#svg-element{
+    width:100%;
+   
 }

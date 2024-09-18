@@ -2,11 +2,11 @@
 
 // hamburger animate
 
-const hamburger= document.querySelector('#bars')
-const navdrop=document.querySelector('#navdrop')
-const topbar=document.querySelector('#topbar')
-const navsvg=document.querySelector('#svg1')
-const links= document.querySelectorAll('li a')
+const hamburger = document.querySelector('#bars')
+const navdrop = document.querySelector('#navdrop')
+const topbar = document.querySelector('#topbar')
+const navsvg = document.querySelector('#svg1')
+const links = document.querySelectorAll('li a')
 
 
 
@@ -25,70 +25,68 @@ tl.to("#animatedCircle1", {
     ease: "power2.inOut"
 }, "<")
 
-.to("#animatedCircle2", {
-    duration: 3,
-    attr: { r: 270 },
-    ease: "power2.inOut"
-}, "<")
+    .to("#animatedCircle2", {
+        duration: 3,
+        attr: { r: 270 },
+        ease: "power2.inOut"
+    }, "<")
 
-.to("#animatedCircle3", {
-    duration: 4,
-    attr: { r: 200 },
-    ease: "power2.inOut"
-}, "<")
+    .to("#animatedCircle3", {
+        duration: 4,
+        attr: { r: 200 },
+        ease: "power2.inOut"
+    }, "<")
 
 
 
 // hamburger icon dropping down the nav section and related changes
 
 
-hamburger.addEventListener('click', function(){
-   
+hamburger.addEventListener('click', function () {
+
     //bringing the navbar down
     navdrop.classList.toggle('drop')
 
-        // checking the size of the window
-        const screenWidth = window.innerWidth;
-        // if screenwidth is less than 800, the hamburger wont turn into white in transition
-            if (screenWidth>640){
-                hamburger.classList.toggle('change')               
-            }
-            
-            else{
-                hamburger.classList.toggle('smallerChange')                
-                
-            }
-
-
-            if(screenWidth<800){
-
-            //setting the noscroll class on the root html element. applied it on the roothtml cuz 'document.body.style' settting didnt work.
-            document.documentElement.classList.toggle('noscroll')
-            
-            } 
-            
-           
-    // changing the color of the top svg bar elements based on the current color.
-    const currentColor = getComputedStyle(topbar).backgroundColor;        
-   
-    if(currentColor=="rgb(255, 255, 255)"){
-
-        topbar.style.backgroundColor = '#031806'
-        navsvg.setAttribute('fill', '#031806')
-        
+    // checking the size of the window
+    const screenWidth = window.innerWidth;
+    // if screenwidth is less than 800, the hamburger wont turn into white in transition
+    if (screenWidth > 640) {
+        hamburger.classList.toggle('change')
     }
 
-    else{
-        topbar.style.backgroundColor = "white"
-        
-        navsvg.setAttribute('fill', 'white')
-        
-     } 
+    else {
+        hamburger.classList.toggle('smallerChange')
 
-    // playing the gsap animations by activating
+    }
+
+    // want to disable scrolling when the menu is dropped down.
+    //setting the noscroll class on the root html element. applied it on the roothtml cuz 'document.body.style' settting didnt work.
+    document.documentElement.classList.toggle('noscroll')
 
 
-    tl.play();
+
+
+    // changing the color of the top svg bar elements based on the current color.
+    const currentColor = getComputedStyle(topbar).backgroundColor;
+
+if (currentColor == "rgb(255, 255, 255)") {
+
+    topbar.style.backgroundColor = '#031806'
+    navsvg.setAttribute('fill', '#031806')
+
+}
+
+else {
+    topbar.style.backgroundColor = "white"
+
+    navsvg.setAttribute('fill', 'white')
+
+}
+
+// playing the gsap animations by activating
+
+
+tl.play();
    
   
 })
@@ -99,44 +97,44 @@ hamburger.addEventListener('click', function(){
 // for(let link of links){
 //     link.addEventListener('click', function(subhanu){
 //         subhanu.preventDefault();
-    
+
 //         navdrop.classList.remove('drop');
- 
+
 //         // giving time for the transition to finish and then navigating to the link 
 //         setTimeout(()=>
 //         {
 //             window.location.href = this.href;
 //         },1000)    
-    
-    
-    
+
+
+
 //     })
-    
+
 //     }
 
 
-// adding icon to the active page
+// adding icon to the active page in nav
 
-    // Get the current URL path
-    const path = window.location.pathname;
-    
+// Get the current URL path
+const path = window.location.pathname;
 
-    // Extract the filename 
-    const page = path.split('/').pop();
-    
 
-    // Select all navigation links
-    const navItems = document.querySelectorAll('#navitems li');
-    
+// Extract the filename 
+const page = path.split('/').pop();
 
-    navItems.forEach(item => {
-        
-        const link = item.querySelector('a').getAttribute('href');
-         if (link === page) {
-            item.classList.add('active');            
-        }
-        
-    });
+
+// Select all navigation links
+const navItems = document.querySelectorAll('#navitems li');
+
+
+navItems.forEach(item => {
+
+    const link = item.querySelector('a').getAttribute('href');
+    if (link === page) {
+        item.classList.add('active');
+    }
+
+});
 
 
 
@@ -148,7 +146,7 @@ var loader = document.getElementById('preloader')
 function closepreloader() {
 
     // mehemth puluwn: document.getElementById("preloader").style.display = 'none';
-loader.classList.add("preloader-off")
+    loader.classList.add("preloader-off")
 }
 
 window.addEventListener("load", function () {
@@ -158,9 +156,8 @@ window.addEventListener("load", function () {
 });
 
 // removing the element from the dom upon transition completion
-loader.addEventListener('transitionend',()=>
-{
-document.body.removeChild(loader);
+loader.addEventListener('transitionend', () => {
+    document.body.removeChild(loader);
 })
 
 
