@@ -284,3 +284,9 @@ html,
     width:100%;
    
 }
+
+
+.visible{
+   transform:translateX(0px)
+    
+}

@@ -17,21 +17,22 @@
     <script src="https://kit.fontawesome.com/d89352fd46.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap" rel="stylesheet">
     <!-- importing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
 
 
 
 
 <body class="font-space">
 
-
     <!-- ----------------------------------------------------------------nav--------------------------------------------------------------- -->
 
     <nav>
         <div id="topbar" class="w-screen hidden sm:block absolute h-5 -top-3 bg-white z-40"></div>
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl ">ClimateChngLK
+        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-white">
+            ClimateChngLK
         </h1>
 
         <div id="bars" class="absolute top-10 right-6 sm:top-5 sm:right-14 z-50 cursor-pointer ">
@@ -54,11 +55,13 @@
 
     <div id="navdrop"
         class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out overflow-hidden ">
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">ClimateChngLK
+        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">
+            ClimateChngLK
         </h1>
         <ul id="navitems" class="text-gray-500 mt-40 self-end text-4xl pr-20 font-bold">
             <li class="text-end">
-                 <a href="index.html" class="hover:text-gray-600 duration-100">Home</a> </li>
+                <a href="index.html" class="hover:text-gray-600 duration-100">Home</a>
+            </li>
             <li class="text-end"> <a href="whats.html" class="hover:text-gray-600 duration-100">What's That </a></li>
             <li class="text-end"> <a href="action.html" class="hover:text-gray-600 duration-100">Action </a></li>
             <li class="text-end"> <a href="analytics.html" class="hover:text-gray-600 duration-100">Analytics</a></li>
@@ -66,21 +69,39 @@
 
         </ul>
 
-<div id="svgwrapper" class="relative bottom-60 hidden lg:block ">    
-            <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none" xmlns="http://www.w3.org/2000/svg" class=" absolute">
-                
-                <circle  cx="-20" cy="300" r="250" fill="#031806" id="animatedCircle1"></circle>
-                <circle  cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
-                <circle  cx="-50" cy="300" r="150" fill="#226A7F"id="animatedCircle3" ></circle>
-                </svg>
-            <img src="images/globe img.png" alt="world images" class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50">
-</div>
-            
+        <div id="svgwrapper" class="relative bottom-60 hidden lg:block ">
+            <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none"
+                xmlns="http://www.w3.org/2000/svg" class=" absolute">
+
+                <circle cx="-20" cy="300" r="250" fill="#031806" id="animatedCircle1"></circle>
+                <circle cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
+                <circle cx="-50" cy="300" r="150" fill="#226A7F" id="animatedCircle3"></circle>
+            </svg>
+            <!-- <img src="images/globe img.png" alt="world images" class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50"> -->
+        </div>
+
     </div>
- <!-- preloader -->
+    <!-- preloader -->
     <div id="preloader" class="loader">
-     </div>
-      
-     <script defer src="app.js"></script>
-</body>
-</html>
+    </div>
+
+    <script defer src="app.js"></script>
+
+    <svg id="accentsvg" width="100%" height="30%" class="absolute inset-0 -z-10" preserveAspectRatio="none"
+        viewBox="0 0 100 100">
+        <polygon points="0,45 0,0 100,0 100,100" fill="#031806" />
+    </svg>
+
+    <main class="w-3/4 mx-auto lg:w-7/12" style="margin-top: 10vh;">
+        <div id="title">
+            <h1 class="text-3xl font-bold inline">Analytics</h1>
+            <i class="fa-solid fa-caret-right text-3xl"></i>
+        </div>
+        <h2 class="text-xl">See the data behind how Climate Change is impacting the World and Sri Lanka</h2>
+        <br>
+        <h2 class="text-2xl font-bold"></h2>
+
+    </main>
+    </body>
+    </html>
+    
