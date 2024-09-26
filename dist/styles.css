@@ -917,8 +917,16 @@ video {
   max-width: 500px;
 }
 
+.max-w-\[60\%\] {
+  max-width: 60%;
+}
+
 .max-w-\[70\%\] {
   max-width: 70%;
+}
+
+.max-w-\[80\%\] {
+  max-width: 80%;
 }
 
 .-translate-y-full {
@@ -938,6 +946,14 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .list-disc {
@@ -970,6 +986,12 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .self-end {
@@ -1027,6 +1049,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-5 {
@@ -1523,6 +1549,10 @@ html,
   transform:translateX(0px)
 }
 
+.blueitemlist-bg{
+  background-image: linear-gradient(105deg,#003a48 12%,#3EAFDF 100%);
+}
+
 .hover\:text-blue-900:hover {
   --tw-text-opacity: 1;
   color: rgb(30 58 138 / var(--tw-text-opacity));
@@ -1616,6 +1646,10 @@ html,
     max-width: 9rem;
   }
 
+  .md\:max-w-\[60\%\] {
+    max-width: 60%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1696,6 +1730,16 @@ html,
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
