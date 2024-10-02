@@ -147,10 +147,11 @@ function closepreloader() {
 
     // mehemth puluwn: document.getElementById("preloader").style.display = 'none';
     loader.classList.add("preloader-off")
+    document.body.overflowX='auto';
 }
 
 window.addEventListener("load", function () {
-
+    document.body.style.overflow = 'hidden';
     setTimeout(closepreloader, 1500);
 
 });

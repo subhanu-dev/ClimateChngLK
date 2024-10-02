@@ -188,3 +188,60 @@ fetch("https://api.open-meteo.com/v1/forecast?latitude=6.0461&longitude=80.2103&
     .catch(handleError);
 
 
+/*************************************the annual emissions by country***************************  */
+
+const percents = document.querySelectorAll('.percent');
+const emissioncard = document.getElementById('emissionsByCountry')
+
+
+
+function runcountNumbers() {
+    percents.forEach((percent) => {
+        let x = percent.textContent;
+        x = parseInt(x.substring(0, 2))
+        let y = 0;
+        function countNumbers() {
+            if (y <= x) {
+                percent.innerText = ` ${y} % `
+                y++;
+                setTimeout(countNumbers, 150);  // Recursively calling setTimeout
+            }
+        }
+        countNumbers()
+
+    })
+}
+
+
+
+function incrementCounter(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+
+            runcountNumbers()
+            observer2.unobserve(entry.target)
+        }
+    })
+}
+
+const observer2 = new IntersectionObserver(
+    incrementCounter,
+    {
+        threshold: .8,
+    })
+observer2.observe(emissioncard)
+
+//emissions cards hover animation
+const cards = document.querySelectorAll('.EC');
+
+cards.forEach(card => {
+
+    card.addEventListener('mouseover', () => {
+        card.classList.add('colordemu');  // Add class on hover
+    });
+
+    card.addEventListener('mouseout', () => {
+        card.classList.remove('colordemu');  // Remove class when hover ends
+    });
+
+})
