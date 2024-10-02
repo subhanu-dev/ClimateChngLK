@@ -294,3 +294,18 @@ html,
 .blueitemlist-bg{
     background-image: linear-gradient(105deg,#003a48 12%,#3EAFDF 100%);
 }
+
+
+#card-bottomPart{
+    background-color: #9aac3490 ;
+
+}
+
+ #card-bottomPart::before {
+    content: "";
+    position: absolute;
+   inset: 0;
+    background: url(images/alertcard.png) no-repeat center/cover;
+    z-index: -1; /* Ensure the image stays behind other content */
+} 
+
