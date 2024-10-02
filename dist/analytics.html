@@ -15,11 +15,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/d89352fd46.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap" rel="stylesheet">
+
     <!-- importing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="app.js"></script>
+        <script defer src="analytics.js"></script>
 </head>
 
 
@@ -85,7 +87,7 @@
     <div id="preloader" class="loader">
     </div>
 
-    <script defer src="app.js"></script>
+  
 
     <svg id="accentsvg" width="100%" height="30%" class="absolute inset-0 -z-10" preserveAspectRatio="none"
         viewBox="0 0 100 100">
@@ -100,12 +102,12 @@
         <h2 class="text-xl">See the data behind how Climate Change is impacting the World and Sri Lanka</h2>
         <div class="max-w-[80%] md:max-w-[60%] blueitemlist-bg p-4 rounded-md mt-4 text-white " id="contentlist">
 
-            <h2 id="list-title text-xl">In this page</h2>
+            <h2 id="list-title" class="text-xl">In this page</h2>
             <hr class="max-w-[60%] h-1">
             <ol class="list-inside list-decimal space-y-1">
                 <li>Global Statistics</li>
                 <li>Future Projections</li>
-                <li>Sri lanka's Emission Data</li>
+                <li>Sri Lanka's Emission Data</li>
                 <li>An Island vulnerable to climate change</li>
             </ul>
 
@@ -123,26 +125,42 @@
 
 
     <h3 class="mt-4 text-xl lg:text-2xl font-bold">Future Projections</h3> 
+    <section id="sldata">
+    <h3 class="my-4 text-xl lg:text-2xl font-bold">Sri Lanka's Emission Data</h3> 
 
-<div id="tempcard" class="bg-darkgreen-0 rounded-md p-4 text-white ">
-    <h3 class="text-xl">Weather Today <br>
-         <span class="text-base">23rd Sep 2023</span></h3>
-    <div class="w-[95%] mx-auto p-4 flex flex-row bg-waterlightblue-0 justify-between rounded-sm mt-3 relative overflow-hidden ">
-<p class="block font-bold">Colombo</p>
-<p class="block relative z-10">25  <sup>0</sup>  C</p>
-<div class="rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40"></div>
-    </div>
-    <div class="w-[95%] mx-auto p-4 flex flex-row bg-waterlightblue-0 justify-between rounded-sm mt-3 ">
-<p class="block font-bold">Jaffna</p>
-<p class="block">25  <sup>0</sup>  C</p>
-    </div>
-    <div class="w-[95%] mx-auto p-4 flex flex-row bg-waterlightblue-0 justify-between rounded-sm mt-3">
-<p class="block font-bold">Galle</p>
-<p class="block">25  <sup>0</sup>  C</p>
+    <!-- -----------------------------Temperature for the main cities in Sri lanka ----------------------------------------------- -->
 
+    <div id="tempcard" class="bg-darkgreen-0 rounded-md p-4 text-white">
+        <h3 class="text-xl font-bold">Weather Today </h3>
+            <p id="date" class="text-base ">23rd Sep 2023</p>
+        
+        <div class="city-card w-[95%] mx-auto p-4 flex flex-row blueitemlist-bg justify-between rounded-sm mt-3 relative overflow-hidden ">
+            <p class="block font-bold">Colombo</p>
+            <p id="coltemp" class=" block relative z-10">25 <sup>0</sup> C</p>
+            <div class="weatherico relative z-10  text-2xl"><i id="col-ico" class="fa-solid"></i></div>
+            <div class="rounded-bound duration-200  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+            </div>
+        </div>
+        <div
+            class="w-[95%] blueitemlist-bg mx-auto p-4 flex flex-row 0 justify-between rounded-sm mt-3  relative overflow-hidden">
+            <p class="block font-bold">Jaffna</p>
+            <p id="jaftemp" class="block relative z-10">25 <sup>0</sup> C</p>
+            <div class="rounded-bound duration-500  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+            </div>
+            <div class="weatherico relative z-10  text-2xl"><i id="jaf-ico" class="fa-solid"></i></div>
+
+        </div>
+        <div
+            class="w-[95%] mx-auto p-4 flex flex-row blueitemlist-bg justify-between rounded-sm my-3 relative overflow-hidden">
+            <p class="block font-bold">Galle</p>
+            <p id="galtemp" class="block relative z-10">25 <sup>0</sup> C</p>
+            <div class="rounded-bound duration-700  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+            </div>
+            <div class="weatherico relative z-10  text-2xl"><i id="gal-ico" class="fa-solid"></i></div>
+        </div>
     </div>
-<p class="text-xs">Source: </p>
-</div>
+
+</section>
     </main>
     <div id="top-btn"
     class="translate-x-40 grid cursor-pointer fixed bottom-10 right-7 lg:right-10 w-7 h-7 lg:w-10 lg:h-10 bg-waterdarkblue-0 rounded-full items-center justify-center duration-300">

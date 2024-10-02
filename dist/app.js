@@ -161,24 +161,4 @@ loader.addEventListener('transitionend', () => {
 })
 
 
-//********************************************scroll to top button************************** */
-const scrollbtn = document.getElementById("top-btn")
-const scrollThreshold = 300;  //this is the number of pixels that we have to scroll before appearing the button on page
-
-function handleScroll() {
-    if (window.scrollY > scrollThreshold) {
-        scrollbtn.classList.add('visible');
-    } else {
-        scrollbtn.classList.remove('visible');
-    }
-}
-
-window.addEventListener('scroll', handleScroll);
-
-scrollbtn.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    })
-})
 

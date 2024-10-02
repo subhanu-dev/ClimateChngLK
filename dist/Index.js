@@ -45,6 +45,9 @@ const observer = new IntersectionObserver((entries) => {
     }
 
 })
+}
+,{
+    threshold:.4,
 });
 
 const hiddenElements = document.querySelectorAll('.card');

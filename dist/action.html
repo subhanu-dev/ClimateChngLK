@@ -331,7 +331,29 @@ around 30% of Sri Lanka is covered by Forest cover.  And due to the tropical hum
         class="translate-x-40 grid cursor-pointer fixed bottom-10 right-7 lg:right-10 w-7 h-7 lg:w-10 lg:h-10 bg-waterdarkblue-0 rounded-full items-center justify-center duration-300">
         <i class="fa-solid fa-caret-up text-white text-2xl"></i>
     </div>
+<script>
+  //********************************************scroll to top button************************** */
+const scrollbtn = document.getElementById("top-btn")
+const scrollThreshold = 300;  //this is the number of pixels that we have to scroll before appearing the button on page
 
+function handleScroll() {
+    if (window.scrollY > scrollThreshold) {
+        scrollbtn.classList.add('visible');
+    } else {
+        scrollbtn.classList.remove('visible');
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
+
+scrollbtn.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+})
+
+</script>
 
   </body>
 </html>

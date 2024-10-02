@@ -309,3 +309,9 @@ html,
     z-index: -1; /* Ensure the image stays behind other content */
 } 
 
+
+.circle-size{
+    width:60%;
+    }
+    
+
