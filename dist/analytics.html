@@ -113,7 +113,7 @@
             </ul>
 
         </div>
-
+<!----------------------------------Global Data section starts here---------------------------------------------------------------------------->
        <section id="gloabaData">
            <h3 class="mt-4 text-xl lg:text-2xl font-bold">Global Statistics</h3> 
            <p id="gco2">Global Carbon-Dioxide Emissions</p>
@@ -124,10 +124,10 @@
            <canvas id="goOceanLevel"></canvas>
 
            <p class="text-xl  py-6 font-medium">Greenhouse Emissions by Sector</p>
-           <div class="canvas-bounds h-80"> <canvas class="rounded-tl-xl rounded-br-2xl bg-green-200" id ="emissions-Sector"> </canvas>
+           <div class="canvas-bounds h-80"> <canvas class="rounded-tl-xl rounded-br-2xl pie-chart-style" id ="emissions-Sector"> </canvas>
        </div>
 
-           <!-------------------------------------------------------yearly  emissions by country------------------------------------------------- -->
+<!-------------------------------------------------------yearly  emissions by country------------------------------------------------- -->
            
            <div id="emissionsByCountry" class=" mt-10 h-80">
                <h3 class="text-xl  py-6 font-medium">Emissions by Country <svg xmlns="http://www.w3.org/2000/svg"
@@ -170,13 +170,19 @@
             <p class="">1.05 B Metric Tons/yr</p>
             <p class="percent text-xl font-bold">3%</p>
            
-               </div>     
+               </div>   
+            <p class="my-2">Just looking at current largest emitters can be misleading as many would point their finger at developing nations like
+                China that are rapidly industrializing. Only when we look at the cumulative emissions we can see which countries have historically
+                contributed most to the climate Change.
+                <br>
+                For example, Germany is one of the lowest emitting countries that is having most of their production processes carbon free today. But historically,
+                Germany is one of the top nations in cumulative emissions. 
+            </p>  
+            
             <p class="text-md">Cumulative Emissions by Country</p>      
-           <!-- <div class="">
-               <iframe class=" w-full h-[550px] block" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" style="display: initial; margin: 0 auto;"
-               src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/climate-justice/cumulative-emissions/cumulative-emissions.html">
-                         </iframe>
-           </div> -->
+           <div class="">
+              
+           </div>
        </section>
 
 
@@ -185,18 +191,18 @@
     <h3 class="my-4 text-xl lg:text-2xl font-bold">Sri Lanka's Emission Data</h3> 
 
     <!-- Emission numbers-->
-     <div class="">
+     <div class="my-6 md:text-xl">
         <div>
             <p >Fossil CO<sub>2</sub> Emissions (2022)</p>
-            <p class="numbers font-bold">18,535,920 Tons</p>
+            <p class="numbers text-xl font-bold">18,535,920 Tons</p>
         </div>
         <div>
             <P>Global Share</P>
-            <p class="numbers font-bold">0.05%</p>
+            <p class="numbers text-xl font-bold">0.05%</p>
         </div>
         <div>
             <P>Tons per Capita</P>
-            <p class="numbers font-bold">0.81</p>
+            <p class="numbers text-xl font-bold">0.81</p>
         </div>
      </div>
 

@@ -19,7 +19,8 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+       </head>
 
 <body class="font-space text-white bg-darkgreen-0 ">
 
@@ -67,20 +68,65 @@
                 xmlns="http://www.w3.org/2000/svg" class=" absolute">
 
                 <circle  cx="-20" cy="300" r="250" fill="#031806" id="animatedCircle1"></circle>
-                <circle  cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
+                <circle  cx="-55" cy="300" r="200" fill="#AEE33B" id="animatedCircle2"></circle>
                 <circle  cx="-50" cy="300" r="150" fill="#226A7F"id="animatedCircle3" ></circle>
             </svg>
-            <img src="images/globe img.png" alt="world images"
-                class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50">
+            <!-- <img src="images/globe img.png" alt="world images"class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50"> -->
         </div>
 
     </div>
+    
+<!-- --------------------------------------------------- loader----------------------------------------------------------------------------->
+ <div id="preloader" class="loader"> </div>
 
-<section class="w-10/12 h-96 m-auto bg-slate-300 p-8 text-black rounded-lg">
-    <h3> Designed a Developed by: <a href="https://github.com/subhanu-dev" class="hover:text-blue-900"> Subhanu-Dev</a></h3>
-</section>
+<!--------------------------------------------------------main-------------------------------------------------------------------------------- -->
 
-<script defer src="app.js"></script>
+
+ <div id=""></div>
+
+    <main class="w-3/4 mx-auto bg-white rounded-md mt-24 text-sm text-black pt-2 pl-2" >
+
+        <h1 class="text-xl font-bold my-2">More Resources</h1>
+        <p>OpenEarth.org : </p><a href="" class="underline text-blue-800 "target= "_blank">https://www.openearth.org/</a>
+        <h2 class="text-xl font-bold my-2">Personal Notes</h2>
+        <p></p>
+        <div id="container"></div>
+        
+        <div style="background-color:#AEE33B" class="p-4 rounded-br-md">
+            <p class="font-bold my-2">Designed and Developed by: <a href="https://github.com/subhanu-dev" target="_blank" class="underline text-blue-800">Subhanu-Dev</a></p>
+        <p class="text-xs mt-2">
+            Disclaimer: The website is compiled by independent research done from various data sources. The credibility of the original data is not guaranteed and the data sources are mentioned with their results in most places under footnotes or references. 
+        </p>
+        </div>
+ </main>
+
+
+
+<script defer src="app.js">
+   
+</script>
+<script>
+     Highcharts.chart('container', {
+        title: {
+            text: 'Monthly Average Temperature'
+        },
+        subtitle: {
+            text: 'Source: WorldClimate.com'
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature (°C)'
+            }
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }]
+    });
+</script>
 </body>
 
 </html>
