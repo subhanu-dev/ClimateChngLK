@@ -137,8 +137,6 @@ navItems.forEach(item => {
 });
 
 
-
-
 /******************************************Preloader****************************************************/
 
 var loader = document.getElementById('preloader')
@@ -147,11 +145,11 @@ function closepreloader() {
 
     // mehemth puluwn: document.getElementById("preloader").style.display = 'none';
     loader.classList.add("preloader-off")
-    document.body.overflowX='auto';
+     document.documentElement.style.overflow='auto'; //DocumentElement is the root node (HTML node.)
 }
 
 window.addEventListener("load", function () {
-    document.body.style.overflow = 'hidden';
+    
     setTimeout(closepreloader, 1500);
 
 });

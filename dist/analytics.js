@@ -245,3 +245,76 @@ cards.forEach(card => {
     });
 
 })
+
+
+/********************Greenhouse Emissions by Sector pie chart**************** */
+
+
+const ctx2 = document.getElementById('emissions-Sector');
+
+const chart2 = new Chart(ctx2, {
+    type: 'pie',
+    data: {
+        labels: [
+            'Agriculture',
+            'Waste',
+            'Chemical & Cement Industry',
+            'Energy in Buildings',
+            'Energy in Transport',
+            'Energy use in Industry',
+            'Fuel Leakage',
+            'Other Industrial Processes'
+        ],
+        datasets: [{
+            label: 'Greenhouse Emissions',
+            data: [18.4, 3.2, 5.2, 17.5, 16.2, 24.2, 5.8, 10],
+            backgroundColor: [  // Add colors for each segment
+                '#34AC64',
+                '#E88A76',
+                '#E9F55F',
+                '#A078D3',
+                '#7D2C1B',
+                '#65A0F9',
+                '#F0C556',
+                '#00648E',
+                '#001F8E',
+
+            ],
+            hoverOffset: 20,  // Segment expansion on hover
+            borderColor: 'black',
+            borderWidth: 1,
+            hoverBorderWidth: 3,  // Hover border size
+        }]
+    },
+    options: {       
+        plugins: {
+              legend: {
+                display: true,
+                position: 'bottom',
+                align: 'start',
+                labels: {
+                    font: {
+                        family: 'Lato',  // Set font family here
+                        size: 12,
+                        weight:'bold'
+                    },
+                    padding:5,
+                   
+                },
+            },
+
+        },
+        layout: {
+            padding: {
+                right: 20,
+                left: 20,
+                top: 20,
+                bottom: 20  // Legend padding example
+            },
+
+        },
+        maintainAspectRatio: false,  // Disable aspect ratio
+        responsive: true,
+      
+    }
+});

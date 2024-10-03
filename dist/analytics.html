@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/d89352fd46.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- importing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -121,15 +122,20 @@
            <canvas id="gOceanTempt"></canvas>
            <p>Global Rise in Sea Levels</p>
            <canvas id="goOceanLevel"></canvas>
+
+           <p class="text-xl  py-6 font-medium">Greenhouse Emissions by Sector</p>
+           <div class="canvas-bounds h-80"> <canvas class="rounded-tl-xl rounded-br-2xl bg-green-200" id ="emissions-Sector"> </canvas>
+       </div>
+
            <!-------------------------------------------------------yearly  emissions by country------------------------------------------------- -->
            
            <div id="emissionsByCountry" class=" mt-10 h-80">
-               <h3 class="text-xl font-ubuntu py-6 font-medium">Emissions by Country <svg xmlns="http://www.w3.org/2000/svg"
+               <h3 class="text-xl  py-6 font-medium">Emissions by Country <svg xmlns="http://www.w3.org/2000/svg"
                 fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6 inline-block">
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
-            </svg>
-            2023</h3>
+            </svg></h3>
+            <p class="text-md">Emissions by Country - 2023</p>
                <div id="China"
             class=" duration-100 EC rounded-md flex justify-evenly flex-row gap-10 my-2 border-b-2 border-black">
             <p class="font-bold ">China</p>
@@ -164,16 +170,35 @@
             <p class="">1.05 B Metric Tons/yr</p>
             <p class="percent text-xl font-bold">3%</p>
            
-               </div>
-           
-           <!-- <iframe class=" w-full h-[550px]" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" style="display: initial; margin: 0 auto;" src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/climate-justice/cumulative-emissions/cumulative-emissions.html"> -->
-          </iframe>
+               </div>     
+            <p class="text-md">Cumulative Emissions by Country</p>      
+           <!-- <div class="">
+               <iframe class=" w-full h-[550px] block" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" style="display: initial; margin: 0 auto;"
+               src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/climate-justice/cumulative-emissions/cumulative-emissions.html">
+                         </iframe>
+           </div> -->
        </section>
 
 
     <h3 class="mt-4 text-xl lg:text-2xl font-bold">Future Projections</h3> 
     <section id="sldata">
     <h3 class="my-4 text-xl lg:text-2xl font-bold">Sri Lanka's Emission Data</h3> 
+
+    <!-- Emission numbers-->
+     <div class="">
+        <div>
+            <p >Fossil CO<sub>2</sub> Emissions (2022)</p>
+            <p class="numbers font-bold">18,535,920 Tons</p>
+        </div>
+        <div>
+            <P>Global Share</P>
+            <p class="numbers font-bold">0.05%</p>
+        </div>
+        <div>
+            <P>Tons per Capita</P>
+            <p class="numbers font-bold">0.81</p>
+        </div>
+     </div>
 
     <!-- -----------------------------Temperature for the main cities in Sri lanka ----------------------------------------------- -->
 
