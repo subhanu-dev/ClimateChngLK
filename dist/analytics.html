@@ -113,22 +113,60 @@
                 <li>Global Statistics</li>
                 <li>Future Projections</li>
                 <li>Sri Lanka's Emission Data</li>
-                <li>An Island vulnerable to climate change</li>
-                </ul>
+               </ul>
 
+        </div>
+
+        <div id="tempcard" class="bg-darkgreen-0 rounded-md p-4 text-white mt-5">
+            <h3 class="text-xl font-bold">Weather Today </h3>
+            <p id="date" class="text-base ">23rd Sep 2023</p>
+
+            <div
+                class="city-card w-[95%] mx-auto p-4 flex flex-row blueitemlist-bg justify-between rounded-sm mt-3 relative overflow-hidden ">
+                <p class="block font-bold">Colombo</p>
+                <p id="coltemp" class=" block relative z-10">25 <sup>0</sup> C</p>
+                <div class="weatherico relative z-10  text-2xl"><i id="col-ico" class="fa-solid"></i></div>
+                <div
+                    class="rounded-bound duration-200  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+                </div>
+            </div>
+            <div
+                class="w-[95%] blueitemlist-bg mx-auto p-4 flex flex-row 0 justify-between rounded-sm mt-3  relative overflow-hidden">
+                <p class="block font-bold">Jaffna</p>
+                <p id="jaftemp" class="block relative z-10">25 <sup>0</sup> C</p>
+                <div
+                    class="rounded-bound duration-500  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+                </div>
+                <div class="weatherico relative z-10  text-2xl"><i id="jaf-ico" class="fa-solid"></i></div>
+
+            </div>
+            <div
+                class="w-[95%] mx-auto p-4 flex flex-row blueitemlist-bg justify-between rounded-sm my-3 relative overflow-hidden">
+                <p class="block font-bold">Galle</p>
+                <p id="galtemp" class="block relative z-10">25 <sup>0</sup> C</p>
+                <div
+                    class="rounded-bound duration-700  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+                </div>
+                <div class="weatherico relative z-10  text-2xl"><i id="gal-ico" class="fa-solid"></i></div>
+            </div>
         </div>
         <!----------------------------------Global Data section starts here---------------------------------------------------------------------------->
         <section id="gloabaData">
             <h3 class="mt-4 text-xl lg:text-2xl font-bold border-b-2 border-black">1. Global Statistics</h3>
-            <p id="gco2">Global Carbon-Dioxide Emissions</p>
+            <p id="gco2" class="text-xl  py-6 font-medium">Global Carbon-Dioxide Emissions</p>
+
             <canvas></canvas>
-            <p>Global Temperature Anomalies</p>
+<!-------------------------------------------- global historic temperature anomalies chart ----------------------------------->
+            <p class="text-xl  py-6 font-medium">Global Temperature Anomalies</p>
             <div class="my-4">                
                 <div id="tempAnomaliesChart"></div>
                 <a href="data/temperature_anomalies.csv" download class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download the Dataset</a>
             </div>
-            <p>Global Rise in Sea Levels</p>
+            <p class="text-xl  py-6 font-medium">Global Rise in Sea Levels</p>
             <canvas id="goOceanLevel"></canvas>
+            
+<!-- -----------------------------greeenhouse emissions by sector------------------------------------------------------------------ -->
+
 
             <p class="text-xl  py-6 font-medium">Greenhouse Emissions by Sector</p>
             <div class="canvas-bounds h-80"> <canvas class="rounded-tl-xl rounded-br-2xl pie-chart-style"
@@ -144,7 +182,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
                     </svg></h3>
-                <p class="text-md">Emissions by Country - 2023</p>
+                <p class="text-md font-bold">Emissions by Country - 2023</p>
                 <div id="China"
                     class=" duration-100 EC rounded-md flex justify-evenly flex-row gap-10 my-2 border-b-2 border-black">
                     <p class="font-bold ">China</p>
@@ -190,22 +228,34 @@
                 developing nations like
                 China that are rapidly industrializing. Only when we look at the cumulative emissions we can see
                 which countries have historically
-                contributed most to the climate Change.
-                <br>
+                contributed most to the climate Change.</p>
+              <p>
                 For example, Germany is one of the lowest emitting countries that is having most of their production
                 processes carbon free today. But historically,
                 Germany is one of the top nations in cumulative emissions.
             </p>
 
             <!-----------------------------------------------------------------Cumulative Emissions by Country------------------------------------------------------>
-            <p class="text-md">Cumulative Emissions by Country</p>
-            <!-- <iframe scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" style="display: initial; margin: 0 auto;" src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/climate-justice/cumulative-emissions/cumulative-emissions.html" width="770px" height="550px"></iframe> -->
+            <p class="text-md font-bold mt-7">Cumulative Emissions by Country 1850-2021</p>
+         <iframe scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" style="display: initial; margin: 0 auto;" src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/climate-justice/cumulative-emissions/cumulative-emissions.html" width="770px" height="550px"></iframe> --> 
 
 
         </section>
 
 
         <h3 class="mt-4 text-xl lg:text-2xl font-bold border-b-2 border-black">2. Future Projections</h3>
+
+        <img src="images/climaterisk.avif" alt="" class="md:max-w-[70%]">
+        <sub>3.Soverign rating - Climate Vulnerability</sub>
+
+        <p>Sri lanka is one of the most vulnerable countries to the effects of climate change under many metrics. It's important to know which
+            sectors might be most impacted by the effects of global warming. Being in the equator, each passing year feels hotter that the year before.
+            Outdoor activities like agriculture too will be hindered since farmers cannot stay in the sun for long to avoid heat strokes. 
+            </p> <p>
+            It's interesting to see that certain countries least responsible for the climate change are the ones most affected by it. Yet, each and every person in earth is 
+            and will be facing the effects in one way or another. 
+            <a href="https://www.independent.co.uk/climate-change/news/climate-change-poor-countries-world-hit-hardest-affected-india-ethiopia-kenya-moody-s-a7403076.html" target="_blank" class="underline text-darkgreen-0">climate-change-poor-countries-world-hit-hardest</a>
+        </p>
 
         <!-- ---------------------------------------------------SriLanka's emission Data---------------------------------------------------------- -->
         <section id="sldata">
@@ -229,53 +279,49 @@
 
          <!-- --------------air temperature montly chart  -->
 
-         <div class="my-20">
-
+         <div class="my-16">
+            <p class="text-xl  py-6 font-medium">Monthly Surface Air Temperature- Sri Lanka <sup>3</sup></p>
              <div id="airTempChart" > </div>
              <a href="data/srilanka monthly data.csv" download class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download the Dataset</a>
          
             </div>
 
-
-        <!-- -----------------------------Temperature for the main cities in Sri lanka ----------------------------------------------- -->
-                   
+        <!-- fossil fuel consumption in Sri Lanka -->
+         <div>
+            <p class="text-xl  py-6 font-medium">Fossil Fuel Consumption in Sri Lanka</p>
+            <img src="images/fuel.png" alt="fuel Usage in Sri Lanka" class="lg:max-w-[70%]"> 
+<sub>4.The Fuel Consumption in Sri Lanka too has exponentially increased alongside emissions </sub>
+         </div>
             
-            <div id="tempcard" class="bg-darkgreen-0 rounded-md p-4 text-white">
-                <h3 class="text-xl font-bold">Weather Today </h3>
-                <p id="date" class="text-base ">23rd Sep 2023</p>
-
-                <div
-                    class="city-card w-[95%] mx-auto p-4 flex flex-row blueitemlist-bg justify-between rounded-sm mt-3 relative overflow-hidden ">
-                    <p class="block font-bold">Colombo</p>
-                    <p id="coltemp" class=" block relative z-10">25 <sup>0</sup> C</p>
-                    <div class="weatherico relative z-10  text-2xl"><i id="col-ico" class="fa-solid"></i></div>
-                    <div
-                        class="rounded-bound duration-200  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
-                    </div>
-                </div>
-                <div
-                    class="w-[95%] blueitemlist-bg mx-auto p-4 flex flex-row 0 justify-between rounded-sm mt-3  relative overflow-hidden">
-                    <p class="block font-bold">Jaffna</p>
-                    <p id="jaftemp" class="block relative z-10">25 <sup>0</sup> C</p>
-                    <div
-                        class="rounded-bound duration-500  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
-                    </div>
-                    <div class="weatherico relative z-10  text-2xl"><i id="jaf-ico" class="fa-solid"></i></div>
-
-                </div>
-                <div
-                    class="w-[95%] mx-auto p-4 flex flex-row blueitemlist-bg justify-between rounded-sm my-3 relative overflow-hidden">
-                    <p class="block font-bold">Galle</p>
-                    <p id="galtemp" class="block relative z-10">25 <sup>0</sup> C</p>
-                    <div
-                        class="rounded-bound duration-700  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
-                    </div>
-                    <div class="weatherico relative z-10  text-2xl"><i id="gal-ico" class="fa-solid"></i></div>
-                </div>
-            </div>
+      
+                   
+                        
 
         </section>
     </main>
+
+    <!--------------------------------------------------------------references--------------------------------------------------- -->
+    <div id="references" class="w-3/4 mx-auto lg:w-7/12 my-5">
+
+        <h3 class="text-xl font-bold border-b-2 border-black">References</h3>
+    <div id="reference-material" class="text-sm">        
+            <p id="footnote1">Carbonbrief.org : <a class="underline"
+                href="https://www.carbonbrief.org/analysis-which-countries-are-historically-responsible-for-climate-change/"
+                target="_blank">https://www.carbonbrief.org/analysis-which-countries-are-historically-responsible-for-climate-change/</a>
+            </p>
+            <p id="footnote2">Moody soverign rating - Climate Vulnerability: <a class="underline" href="https://www.sciencedirect.com/science/article/abs/pii/S0275531923001666" target="_blank">
+                https://www.sciencedirect.com/science/article/abs/pii/S0275531923001666</a></p>
+            <p id="footnote2">World Bank Climate Knowledge Portal : <a class="underline" href="https://climateknowledgeportal.worldbank.org/country/sri-lanka" target="_blank">
+                https://climateknowledgeportal.worldbank.org/country/sri-lanka</a></p>
+               <p id="footnote1">Ministry of power & Energy, Sri lanka- 2022 progress report: <a class="underline"
+                href="https://energymin.gov.lk/web/images/En_Progress_2022-compressed_1.pdf"
+                target="_blank">https://energymin.gov.lk/web/images/En_Progress_2022-compressed_1.pd</a>
+            </p>
+    </div>
+
+      </div>
+ 
+
     <div id="top-btn"
         class="translate-x-40 grid cursor-pointer fixed bottom-10 right-7 lg:right-10 w-7 h-7 lg:w-10 lg:h-10 bg-waterdarkblue-0 rounded-full items-center justify-center duration-300">
         <i class="fa-solid fa-caret-up text-white text-2xl"></i>

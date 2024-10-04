@@ -357,7 +357,7 @@ fetch('data/temperature_anomalies.csv')
             },
             series: [{
                 name: 'Temp anomaly',
-                color: '#f6ad2f',
+                color: '#60b86a',
             }]
         });
     });
