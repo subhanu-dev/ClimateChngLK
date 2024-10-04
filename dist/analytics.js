@@ -206,7 +206,7 @@ function runcountNumbers() {
             if (y <= x) {
                 percent.innerText = ` ${y} % `
                 y++;
-                setTimeout(countNumbers, 150);  // Recursively calling setTimeout
+                setTimeout(countNumbers, 200);  // Recursively calling setTimeout
             }
         }
         countNumbers()
@@ -320,3 +320,44 @@ const chart2 = new Chart(ctx2, {
 
     }
 });
+
+
+fetch('data/srilanka monthly data.csv')  // Replace 'data.csv' with your CSV file path
+    .then(response => response.text())
+    .then(csvData => {
+        Highcharts.chart('airTempChart', {
+            data: {
+                csv: csvData
+            },
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'Monthly Surface Air Temperatures in Sri lanka'
+            },
+            series: [{
+                name: 'Data from CSV',
+            }]
+        });
+    });
+
+
+fetch('data/temperature_anomalies.csv')  
+.then(response => response.text())
+.then(csvData => {
+        Highcharts.chart('tempAnomaliesChart', {
+            data: {
+                csv: csvData
+            },
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'Global Temperature Anomalies 1880-2024'
+            },
+            series: [{
+                name: 'Temp anomaly',
+                color: '#f6ad2f',
+            }]
+        });
+    });
