@@ -19,16 +19,17 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://kit.fontawesome.com/d89352fd46.js" crossorigin="anonymous"></script>
+       
        </head>
 
-<body class="font-space text-white bg-darkgreen-0 ">
+<body class="font-space  bg-darkgreen-0 ">
 
     <!-- ----------------------------------------------------------------nav--------------------------------------------------------------- -->
 
     <nav>
         <div id="topbar" class="w-screen hidden sm:block absolute h-5 -top-3 bg-white z-40"></div>
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl ">ClimateChngLK
+        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-white">ClimateChngLK
         </h1>
 
         <div id="bars" class="absolute top-10 right-5 sm:top-5 sm:right-14 z-50 cursor-pointer ">
@@ -84,49 +85,43 @@
 
  <div id=""></div>
 
-    <main class="w-3/4 mx-auto bg-white rounded-md mt-24 text-sm text-black pt-2 pl-2" >
+    <main class="w-3/4 mx-auto bg-white rounded-t-md mt-24 text-sm text-black pt-2 min-h-[50vh] lg:min-h-[80vh]" >
+<div id="container" class="my-2 mx-4">    
+            <h1 class="text-xl font-bold my-2">More Resources</h1>
+            <p>OpenEarth.org : </p><a href="" class="underline text-blue-800 "target= "_blank">https://www.openearth.org/</a>
+            <h2 class="text-xl font-bold my-2">Personal Notes</h2>
+            <p></p>
+</div>
 
-        <h1 class="text-xl font-bold my-2">More Resources</h1>
-        <p>OpenEarth.org : </p><a href="" class="underline text-blue-800 "target= "_blank">https://www.openearth.org/</a>
-        <h2 class="text-xl font-bold my-2">Personal Notes</h2>
-        <p></p>
-        <div id="container"></div>
+        <div id="container2"></div>
         
-        <div style="background-color:#AEE33B" class="p-4 rounded-br-md">
-            <p class="font-bold my-2">Designed and Developed by: <a href="https://github.com/subhanu-dev" target="_blank" class="underline text-blue-800">Subhanu-Dev</a></p>
-        <p class="text-xs mt-2">
-            Disclaimer: The website is compiled by independent research done from various data sources. The credibility of the original data is not guaranteed and the data sources are mentioned with their results in most places under footnotes or references. 
-        </p>
-        </div>
  </main>
+ 
+ <div style="background-color:#AEE33B" class="p-4 rounded-b-md w-3/4 mx-auto">
+    <p class="font-bold my-2">Designed and Developed by: <a href="https://github.com/subhanu-dev" target="_blank" class="underline text-blue-800">Subhanu-Dev</a></p>
+<p class="text-xs mt-2">
+    Disclaimer: The website is compiled by independent research done from various data sources. The credibility of the original data is not guaranteed and the data sources are mentioned with their results in most places under footnotes or references. 
+</p>
+</div>
 
+ <footer class="px-4 bg-white mt-20 lg:mt-14 relative overflow-hidden text-black">
+    <div class="hidden lg:block py-1">
+        <p class="text-xs text-black">All Rights Reserved @ClimateChngLK</p>
+    </div>
+    <div id="socials" class="mt-3 lg:hidden ">
 
+        <i class="fa-brands fa-facebook-f text-black mx-1"></i>
+        <i class="fa-brands fa-twitter text-black  mx-1"></i>
+        <i class="fa-brands fa-square-instagram mx-1 text-black "></i>
+        <i class="fa-brands fa-linkedin-in mx-1 text-black"></i>
+        <i class="fa-brands fa-youtube mx-1 text-black"></i>
+        <p class="text-sm pr-4 pb-1 mt-1 text-black "> &copy;ClimateChngLK</p>
+    </div>
 
-<script defer src="app.js">
-   
-</script>
-<script>
-     Highcharts.chart('container', {
-        title: {
-            text: 'Monthly Average Temperature'
-        },
-        subtitle: {
-            text: 'Source: WorldClimate.com'
-        },
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
-        yAxis: {
-            title: {
-                text: 'Temperature (°C)'
-            }
-        },
-        series: [{
-            name: 'Tokyo',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-        }]
-    });
-</script>
+</footer>
+
+<script defer src="app.js"></script>
+
 </body>
 
 </html>

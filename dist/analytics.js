@@ -24,62 +24,64 @@ scrollbtn.addEventListener('click', function () {
 /********************getting and displaying current date***********************************/
 
 
-        const datetext = document.getElementById('date')
+const datetext = document.getElementById('date')
 
-        const today = new Date();
-        let date = today.getDate();
-        let Month = today.getMonth();
-        let year = today.getFullYear();
-        let dateAbb = findDayAbb(date)
-
-        function getmonthname(mnth) {
-            switch (mnth) {
-                case 0:
-                    return 'January';
-                case 1:
-                    return 'February';
-                case 2:
-                    return 'March';
-                case 3:
-                    return 'April';
-                case 4:
-                    return 'May';
-                case 5:
-                    return 'June';
-                case 6:
-                    return 'July';
-                case 7:
-                    return 'August';
-                case 8:
-                    return 'September';
-                case 9:
-                    return 'October';
-                case 10:
-                    return 'November';
-                case 11:
-                    return 'December';
-            }
-        }
-
-        let monthName = getmonthname(Month)
+const today = new Date();
+let date = today.getDate();
+let Month = today.getMonth();
+let year = today.getFullYear();
+let dateAbb = findDayAbb(date)
+let hourOfTheDay = today.getHours()
 
 
+function getmonthname(mnth) {
+    switch (mnth) {
+        case 0:
+            return 'January';
+        case 1:
+            return 'February';
+        case 2:
+            return 'March';
+        case 3:
+            return 'April';
+        case 4:
+            return 'May';
+        case 5:
+            return 'June';
+        case 6:
+            return 'July';
+        case 7:
+            return 'August';
+        case 8:
+            return 'September';
+        case 9:
+            return 'October';
+        case 10:
+            return 'November';
+        case 11:
+            return 'December';
+    }
+}
 
-        // getting the date for today
-        datetext.innerText = `${date + dateAbb} of ${monthName} ${year} `;
+let monthName = getmonthname(Month)
 
 
-        function findDayAbb(day) {
-            if (day == 1) {
-                return 'st'
-            } else if (day == 2) {
-                return 'nd'
-            } else if (day == 3) {
-                return 'rd'
-            } else {
-                return 'th'
-            }
-        }
+
+// getting the date for today
+datetext.innerText = `${date + dateAbb} of ${monthName} ${year} `;
+
+
+function findDayAbb(day) {
+    if (day == 1) {
+        return 'st'
+    } else if (day == 2) {
+        return 'nd'
+    } else if (day == 3) {
+        return 'rd'
+    } else {
+        return 'th'
+    }
+}
 
 
 
@@ -131,8 +133,8 @@ const galIcon = document.querySelector('#gal-ico')
 
 
 function getWeatherIco(data) {
-
-    if (data == 1) { return 'fa-cloud' }
+    if (hourOfTheDay >= 19 || hourOfTheDay <= 5) { return 'fa-moon' }
+    else if (data == 1) { return 'fa-cloud' }
     else if (data == 2) { return 'fa-sun' }
     else if (data == 3) { return 'fa-smog' }
     else if (data >= 61 || data <= 67) { return 'fa-cloud-showers-heavy' }
@@ -182,7 +184,7 @@ fetch("https://api.open-meteo.com/v1/forecast?latitude=6.0461&longitude=80.2103&
         gal_temp.innerHTML = ` ${data.current.temperature_2m} <sup>0</sup> C `;
         let currentWeather = data.current.weather_code;
         let iconStyle = getWeatherIco(currentWeather);
-       
+
         galIcon.classList.add(iconStyle);
     })
     .catch(handleError);
@@ -286,9 +288,9 @@ const chart2 = new Chart(ctx2, {
             hoverBorderWidth: 3,  // Hover border size
         }]
     },
-    options: {       
+    options: {
         plugins: {
-              legend: {
+            legend: {
                 display: true,
                 position: 'bottom',
                 align: 'start',
@@ -296,10 +298,10 @@ const chart2 = new Chart(ctx2, {
                     font: {
                         family: 'Lato',  // Set font family here
                         size: 12,
-                        weight:'bold'
+                        weight: 'bold'
                     },
-                    padding:5,
-                   
+                    padding: 5,
+
                 },
             },
 
@@ -315,6 +317,6 @@ const chart2 = new Chart(ctx2, {
         },
         maintainAspectRatio: false,  // Disable aspect ratio
         responsive: true,
-      
+
     }
 });
