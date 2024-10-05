@@ -296,8 +296,13 @@ html,
 }
 
 
+.shadow{
+    box-shadow: 0px 1px 5px rgb(2, 68, 7);
+}
+
 #card-bottomPart{
-    background-color: #9aac3490 ;
+    background-color: #68c4366d ;
+    
 
 }
 
@@ -341,10 +346,11 @@ background-size: 600% 600%;
 }
 
 .pie-chart-style{
-    background-image: linear-gradient(120deg,rgb(156, 229, 248),rgb(168, 252, 178));
+    background-image: linear-gradient(120deg,rgb(156, 229, 248),#a8fcb2);
     box-shadow: 0px 1px 5px rgb(2, 68, 7);
 
 }
+
 
 #gifcontainer {
     background: url('images/globalwarming.gif') no-repeat center center;
