@@ -361,3 +361,22 @@ fetch('data/temperature_anomalies.csv')
             }]
         });
     });
+
+// popup button magic for smaller screens
+
+btn = document.getElementById('popup-btn');
+closebtn = document.getElementById('close-btn');
+popup= document.getElementById('popup');
+
+
+btn.addEventListener('click', 
+ ()=>{
+popup.classList.add('popup-remove')
+ }
+)
+
+closebtn.addEventListener('click',
+    ()=> popup.classList.add('popup-remove')
+)
+
+

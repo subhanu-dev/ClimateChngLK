@@ -359,3 +359,7 @@ background-size: 600% 600%;
     margin:1rem 0 1rem 0;
     
 }
+
+.popup-remove{
+    display:none;
+}

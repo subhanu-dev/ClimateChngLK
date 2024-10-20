@@ -119,7 +119,7 @@
 <!-- -------------------------------------------------------temp cards for cities in Sri Lanka--------------------------- -->
 
 
-        <div id="tempcard" class="bg-darkgreen-0 rounded-md p-4 text-white mt-5">
+        <div id="tempcard" class="bg-darkgreen-0 rounded-md p-4 text-white mt-5 ">
             <h3 class="text-xl font-bold">Weather Today </h3>
             <p id="date" class="text-base ">23rd Sep 2023</p>
 
@@ -137,7 +137,7 @@
                 <p class="block font-bold">Jaffna</p>
                 <p id="jaftemp" class="block relative z-10">25 <sup>0</sup> C</p>
                 <div
-                    class="rounded-bound duration-500  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+                    class="rounded-bound duratlion-500  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
                 </div>
                 <div class="weatherico relative z-10  text-2xl"><i id="jaf-ico" class="fa-solid"></i></div>
 
@@ -240,11 +240,11 @@
 
             <!-----------------------------------------------------------------Cumulative Emissions by Country------------------------------------------------------>
             <p class="text-md font-bold mt-7">Cumulative Emissions by Country 1850-2021</p>
-            <iframe scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px"
+            <!-- <iframe scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px"
                 style="display: initial; margin: 0 auto;"
                 src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/climate-justice/cumulative-emissions/cumulative-emissions.html"
                 width="770px" height="550px"></iframe> 
-
+ -->
 
         </section>
 
@@ -261,6 +261,7 @@
             Outdoor activities like agriculture too will be hindered since farmers cannot stay in the sun for long to
             avoid heat strokes.
         </p>
+        <br>
         <p>
             It's interesting to see that certain countries least responsible for the climate change are the ones most
             affected by it. Yet, each and every person in earth is
@@ -300,6 +301,10 @@
 
             </div>
 
+            <p class="text-xl  py-6 font-medium">CO <sub>2</sub> Emissions by Year - Sri Lanka <sup>4</sup></p>
+            <iframe src="https://ourworldindata.org/grapher/annual-co2-emissions-per-country?country=~LKA&tab=chart" 
+            loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
             <!-- fossil fuel consumption in Sri Lanka -->
             <div>
                 <p class="text-xl  py-6 font-medium">Fossil Fuel Consumption in Sri Lanka</p>
@@ -333,6 +338,12 @@
                     href="https://energymin.gov.lk/web/images/En_Progress_2022-compressed_1.pdf"
                     target="_blank">https://energymin.gov.lk/web/images/En_Progress_2022-compressed_1.pd</a>
             </p>
+            <p id="footnote1"> Our World in Data (Embedded chart):  <a class="underline"
+                    href="https://ourworldindata.org/co2-emissions"
+                    target="_blank">https://ourworldindata.org/co2-emissions</a>
+            </p>
+
+            
         </div>
 
     </div>
@@ -358,6 +369,24 @@
         </div>
     
     </footer>
+
+    <!---------------------------------------------------------  popup button for smaller screens ----------------------------------------------->
+
+    <div id="popup" class="shadow z-50 duration-500 md:hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white min-w-[60%] border-darkgreen-0 border-2 py-2 rounded-md ">
+        <div id="topbar" class="border-b-2 border-darkgreen-0">
+        <div id="close-btn" class="text-end cursor-pointer"><i class="fa-solid fa-x mr-3"></i></div>
+        </div>
+
+            <div  class="text-center leading-tight mt-3 mx-1">
+                <p>The Content on this Page is best viewed through
+                    a larger screen
+                </p>
+                <div id="popup-btn" class="mx-5 p-1 rounded-md min-w-20 text-white bg-darkgreen-0 my-2 cursor-pointer py-2">got it</div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
