@@ -46,6 +46,7 @@ hamburger.addEventListener('click', function () {
 
     //bringing the navbar down
     navdrop.classList.toggle('drop')
+    document.documentElement.classList.toggle('allowscroll')
 
     // checking the size of the window
     const screenWidth = window.innerWidth;
@@ -59,13 +60,7 @@ hamburger.addEventListener('click', function () {
 
     }
 
-    // want to disable scrolling when the menu is dropped down.
-    //setting the noscroll class on the root html element. applied it on the roothtml cuz 'document.body.style' settting didnt work.
-    document.documentElement.classList.toggle('noscroll')
-
-
-
-
+   
     // changing the color of the top svg bar elements based on the current color.
     const currentColor = getComputedStyle(topbar).backgroundColor;
 
@@ -73,13 +68,15 @@ if (currentColor == "rgb(255, 255, 255)") {
 
     topbar.style.backgroundColor = '#031806'
     navsvg.setAttribute('fill', '#031806')
+    
 
 }
 
 else {
     topbar.style.backgroundColor = "white"
-
     navsvg.setAttribute('fill', 'white')
+
+   
 
 }
 
@@ -145,7 +142,7 @@ function closepreloader() {
 
     // mehemth puluwn: document.getElementById("preloader").style.display = 'none';
     loader.classList.add("preloader-off")
-     document.documentElement.style.overflow='auto'; //DocumentElement is the root node (HTML node.)
+    document.documentElement.classList.add('allowscroll')
 }
 
 window.addEventListener("load", function () {

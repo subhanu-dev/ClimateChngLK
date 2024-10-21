@@ -337,15 +337,15 @@ fetch('data/srilanka monthly data.csv')
             series: [
                 {
                     name: 'Series 1',
-                    color: '#003a48'  // Specify color for Series 1
+                    color: '#003a48'  
                 },
                 {
                     name: 'Series 2',
-                    color: '#60b86a'  // Specify color for Series 2
+                    color: '#60b86a'  
                 },
                 {
                     name: 'Series 3',
-                    color: '#3EAFDF'  // Specify color for Series 3
+                    color: '#3EAFDF'  
                 }
             
             ],

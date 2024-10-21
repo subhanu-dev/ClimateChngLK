@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 
-* {
-    /* outline:1px solid red; */
-}
+/* * {
+    outline:1px solid red; 
+} */
 
 html,
 :root {
-    overflow-x: hidden;
-
-}
-
-/*noscroll class added with js  */
-.noscroll {
     overflow: hidden;
+
+} 
+
+
+.allowscroll{
+    overflow-y: auto;
 }
 
 
