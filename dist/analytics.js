@@ -322,7 +322,8 @@ const chart2 = new Chart(ctx2, {
 });
 
 
-fetch('data/srilanka monthly data.csv')  // Replace 'data.csv' with your CSV file path
+
+fetch('data/srilanka monthly data.csv')  
     .then(response => response.text())
     .then(csvData => {
         Highcharts.chart('airTempChart', {
@@ -332,19 +333,25 @@ fetch('data/srilanka monthly data.csv')  // Replace 'data.csv' with your CSV fil
             chart: {
                 type: 'line'
             },
-            title: {
-                text: 'Monthly Surface Air Temperatures in Sri lanka'
-            },
+            title: null,
             series: [{
                 name: 'Data from CSV',
-            }]
+            }],
+            tooltip: {
+                backgroundColor: '#000000',  // Black background
+                style: {
+                    color: '#ffffff'  // White text
+                }
+            },
         });
     });
 
+    
+/******************************** highchart for global temperature anomalies **********************************/
 
-fetch('data/temperature_anomalies.csv')  
-.then(response => response.text())
-.then(csvData => {
+fetch('data/temperature_anomalies.csv')
+    .then(response => response.text())
+    .then(csvData => {
         Highcharts.chart('tempAnomaliesChart', {
             data: {
                 csv: csvData
@@ -352,31 +359,105 @@ fetch('data/temperature_anomalies.csv')
             chart: {
                 type: 'line'
             },
-            title: {
-                text: 'Global Temperature Anomalies 1880-2024'
-            },
+            title: null,
             series: [{
                 name: 'Temp anomaly',
                 color: '#60b86a',
-            }]
+            }],
+            tooltip: {
+                backgroundColor: '#000000', 
+                style: {
+                    color: '#ffffff' 
+                }
+            }
         });
     });
+
+
 
 // popup button magic for smaller screens
 
 btn = document.getElementById('popup-btn');
 closebtn = document.getElementById('close-btn');
-popup= document.getElementById('popup');
+popup = document.getElementById('popup');
 
 
-btn.addEventListener('click', 
- ()=>{
-popup.classList.add('popup-remove')
- }
+btn.addEventListener('click',
+    () => {
+        popup.classList.add('popup-remove')
+    }
 )
 
 closebtn.addEventListener('click',
-    ()=> popup.classList.add('popup-remove')
+    () => popup.classList.add('popup-remove')
 )
 
 
+
+//****************************************************global co2 emissions chart************************************************ */
+
+fetch('data/yearlyemissions.csv')
+    .then(response => response.text())
+    .then(csvText => {
+        // console.log(csvText)
+        // Parse the CSV data
+        const data = parseCSV(csvText);
+
+        // Extract labels (Year) and values (Carbon Dioxide Emissions)
+        const labels = data.map(row => row[0]); // Year
+        const values = data.map(row => row[1]); // Carbon Dioxide Emissions
+
+       
+        const ctx = document.getElementById('gloablCo2Chart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Carbon Dioxide Emissions',
+                    data: values,
+                    borderColor: '#60b86a',
+                    backgroundColor: '#003a4871',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        },
+                        grid: {
+                            display: false
+                        },
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Carbon Dioxide Emissions'
+                        },
+                        ticks: {
+                            // Format y-axis labels to show values in metric tons
+                            callback: function(value) {
+                              return value / 1000000 + ' Metric Tons';
+                            }       },
+                }
+            }}});
+    })
+    .catch(error => {
+        console.error('Error fetching or parsing the CSV file:', error);
+    });
+
+
+// Helper function to parse CSV
+function parseCSV(csvText) {
+    let rows = csvText.split('\n');
+    //   console.log(rows)
+    rows = rows.map(row => row.split(','));
+    //   console.log(rows)
+
+    // Remove any empty rows or headers
+    return rows.slice(1).map(row => [row[0], parseFloat(row[1])]);
+}

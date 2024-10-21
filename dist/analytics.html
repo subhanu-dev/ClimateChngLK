@@ -155,9 +155,15 @@
         <!----------------------------------Global Data section starts here---------------------------------------------------------------------------->
         <section id="gloabaData">
             <h3 class="mt-4 text-xl lg:text-2xl font-bold border-b-2 border-black">1. Global Statistics</h3>
-            <p id="gco2" class="text-xl  py-6 font-medium">Global Carbon-Dioxide Emissions</p>
 
-            <canvas></canvas>
+
+<!-------------------------------------------------------------------- Global co2 emissions by year-------------------------------------------- -->
+            <p id="gco2" class="text-xl  py-6 font-medium">Global Carbon-Dioxide Emissions</p>
+            <canvas id="gloablCo2Chart"></canvas>
+            <a href="data/yearlyemissions.csv" download
+            class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download the Dataset</a>
+            
+            
             <!-------------------------------------------- global historic temperature anomalies chart ----------------------------------->
             <p class="text-xl  py-6 font-medium">Global Temperature Anomalies</p>
             <div class="my-4">
@@ -240,11 +246,12 @@
 
             <!-----------------------------------------------------------------Cumulative Emissions by Country------------------------------------------------------>
             <p class="text-md font-bold mt-7">Cumulative Emissions by Country 1850-2021</p>
-            <!-- <iframe scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px"
-                style="display: initial; margin: 0 auto;"
-                src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/climate-justice/cumulative-emissions/cumulative-emissions.html"
-                width="770px" height="550px"></iframe> 
- -->
+
+             <iframe  frameborder="0" scrolling="no" marginheight="0px" marginwidth="0px" style="display: initial; margin: 0 auto;" 
+             src="https://cbhighcharts2021.s3.eu-west-2.amazonaws.com/climate-justice/cumulative-emissions/cumulative-emissions.html" 
+             width="100%" height="550px">
+             </iframe>
+            
 
         </section>
 
@@ -296,14 +303,14 @@
             <div class="my-16">
                 <p class="text-xl  py-6 font-medium">Monthly Surface Air Temperature- Sri Lanka <sup>3</sup></p>
                 <div id="airTempChart"> </div>
+                <p  class="text-xs my-2 leading-none">Surface air temperature: temperature of the air at or near the Earth's surface, typically measured at a height of 1.25 to 2 meters above ground</p>
                 <a href="data/srilanka monthly data.csv" download
                     class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download the Dataset</a>
-
             </div>
 
             <p class="text-xl  py-6 font-medium">CO <sub>2</sub> Emissions by Year - Sri Lanka <sup>4</sup></p>
             <iframe src="https://ourworldindata.org/grapher/annual-co2-emissions-per-country?country=~LKA&tab=chart" 
-            loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+             style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 
             <!-- fossil fuel consumption in Sri Lanka -->
             <div>
@@ -311,8 +318,6 @@
                 <img src="images/fuel.png" alt="fuel Usage in Sri Lanka" class="lg:max-w-[70%]">
                 <sub>4.The Fuel Consumption in Sri Lanka too has exponentially increased alongside emissions </sub>
             </div>
-
-
 
 
 
