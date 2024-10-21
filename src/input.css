@@ -339,6 +339,17 @@ background-size: 600% 600%;
 
 }
 
+.button-animated{
+    background: linear-gradient(270deg, rgb(49, 206, 245),#56ff6a, #60b86a);
+    box-shadow: 0px 1px 5px rgb(2, 68, 7);
+  animation-name: colorCycle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  background-size: 600% 600%;
+  
+}
+
 @keyframes colorCycle {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -347,7 +358,7 @@ background-size: 600% 600%;
 
 .pie-chart-style{
     background-image: linear-gradient(120deg,rgb(156, 229, 248),#a8fcb2);
-    box-shadow: 0px 1px 5px rgb(2, 68, 7);
+    box-shadow: 0px 1px 1px rgb(0, 22, 2);
 
 }
 

@@ -469,7 +469,7 @@ fetch('data/totalGreenhouse.json')
     .then(response => response.json())
     .then(data => {
 
-        const years = Object.keys(data.cleaned_data).map(date => date.substring(0, 4));;
+        const years = Object.keys(data.cleaned_data).map(date => date.substring(0, 4));
         const emissionsData = Object.values(data.cleaned_data);
 
         const ctx = document.getElementById('SLGreenhouse').getContext('2d');
@@ -480,8 +480,9 @@ fetch('data/totalGreenhouse.json')
                 datasets: [{
                     label: 'Total Greenhouse Gas Emissions (kt CO2 equivalent)',
                     data: emissionsData,
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderColor: '#60b86a',
                     borderWidth: 2,
+                    backgroundColor: '#60b86a'
                     
                 }]
             },
@@ -510,3 +511,55 @@ fetch('data/totalGreenhouse.json')
             }
         });
     })
+
+/********************************************Global Ocean levels plot************************************************* */
+
+    fetch('data/oceanlevels.csv')
+    .then(response => response.text())
+    .then(csvText => {
+        // console.log(csvText)
+        // Parse the CSV data
+        const data = parseCSV(csvText);
+
+        const year = data.map(row => row[0].substring(5, 9))
+        const values = data.map(row => row[1]); // Carbon Dioxide Emissions
+
+       
+        const ctx2 = document.getElementById('goOceanLevel').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: year,
+                datasets: [{
+                    label: 'Global sea level as an average of Church and White (2011) and UHSLC data',
+                    data: values,
+                    borderColor: '#60b86a',
+                    pointRadius: 0,
+                    fill: false,
+                    backgroundColor: '#60b86a'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        },
+                        grid: {
+                            display: false
+                        },
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Rise of Sea levels in milimeters compared to average'
+                        },
+                        
+                }
+            }}});
+    })
+    .catch(error => {
+        console.error('Error fetching or parsing the CSV file:', error);
+    });
