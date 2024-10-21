@@ -461,3 +461,52 @@ function parseCSV(csvText) {
     // Remove any empty rows or headers
     return rows.slice(1).map(row => [row[0], parseFloat(row[1])]);
 }
+
+
+/******************Total greenhouse emissions - Srilanka***************************** */
+
+fetch('data/totalGreenhouse.json')
+    .then(response => response.json())
+    .then(data => {
+
+        const years = Object.keys(data.cleaned_data).map(date => date.substring(0, 4));;
+        const emissionsData = Object.values(data.cleaned_data);
+
+        const ctx = document.getElementById('SLGreenhouse').getContext('2d');
+        const emissionsChart = new Chart(ctx, {
+            type: 'line', // Change to 'bar', 'pie', etc. as needed
+            data: {
+                labels: years,
+                datasets: [{
+                    label: 'Total Greenhouse Gas Emissions (kt CO2 equivalent)',
+                    data: emissionsData,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        },
+                        grid: {
+                            display:false,
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Emissions (kt CO2 equivalent)'
+                        },
+                        beginAtZero: true,
+                      
+                    
+                    }
+                }
+            }
+        });
+    })
