@@ -154,7 +154,7 @@
         </div>
         <!----------------------------------Global Data section starts here---------------------------------------------------------------------------->
         <section id="gloabaData">
-            <h3 class="mt-4 text-xl lg:text-2xl font-bold border-b-2 border-black">1. Global Statistics</h3>
+            <h3 class="mt-12 text-xl lg:text-2xl font-bold border-b-2 border-black">1. Global Statistics</h3>
 
 
             <!-------------------------------------------------------------------- Global co2 emissions by year-------------------------------------------- -->
@@ -190,14 +190,14 @@
 
             <!-------------------------------------------------------yearly  emissions by country------------------------------------------------- -->
 
-            <div id="emissionsByCountry" class=" mt-10 h-80">
-                <h3 class="text-xl  py-6 font-medium">Emissions by Country <svg xmlns="http://www.w3.org/2000/svg"
+            <div id="emissionsByCountry" class=" mt-10">
+                <h3 class="text-xl  py-6 font-medium mb-2">Emissions by Country <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
                         class="size-6 inline-block">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
                     </svg></h3>
-                <p class="text-md font-bold">Emissions by Country - 2023</p>
+                <p class="text-md font-bold mb-8">Emissions by Country - 2023</p>
                 <div id="China"
                     class=" duration-100 EC rounded-md flex justify-evenly flex-row gap-10 my-2 border-b-2 border-black">
                     <p class="font-bold ">China</p>
@@ -238,7 +238,7 @@
                 </div>
             </div>
 
-            <p class="my-2">
+            <p class="mt-6 mb-2">
                 Just looking at current largest emitters can be misleading as many would point their finger at
                 developing nations like
                 China that are rapidly industrializing. Only when we look at the cumulative emissions we can see
@@ -251,7 +251,7 @@
             </p>
 
             <!-----------------------------------------------------------------Cumulative Emissions by Country------------------------------------------------------>
-            <p class="text-md font-bold mt-7">Cumulative Emissions by Country 1850-2021</p>
+            <p class="text-md font-bold mt-8 mb-4">Cumulative Emissions by Country 1850-2021</p>
 
             <iframe frameborder="0" scrolling="no" marginheight="0px" marginwidth="0px"
                 style="display: initial; margin: 0 auto;"
@@ -263,9 +263,9 @@
         </section>
 
 
-        <h3 class="mt-4 text-xl lg:text-2xl font-bold border-b-2 border-black">2. Future Projections</h3>
+        <h3 class="mt-16 text-xl lg:text-2xl font-bold border-b-2 border-black">2. Future Projections</h3>
 
-        <img src="images/climaterisk.avif" alt="" class="md:max-w-[70%]">
+        <img src="images/climaterisk.avif" alt="" class="md:max-w-[70%] mt-8">
         <sub>3.Soverign rating - Climate Vulnerability</sub>
 
         <p>Sri lanka is one of the most vulnerable countries to the effects of climate change under many metrics. It's
@@ -287,7 +287,7 @@
 
         <!-- ---------------------------------------------------SriLanka's emission Data---------------------------------------------------------- -->
         <section id="sldata">
-            <h3 class="my-4 text-xl lg:text-2xl font-bold border-b-2 border-black">3. Sri Lanka's Emission Data</h3>
+            <h3 class="mt-12 my-4 text-xl lg:text-2xl font-bold border-b-2 border-black">3. Sri Lanka's Emission Data</h3>
 
             <!-- Emission numbers-->
             <div class="my-6 md:text-xl">
@@ -307,7 +307,7 @@
 
             <!-- --------------air temperature montly chart  -->
 
-            <div class="my-16">
+            <div class="my-8">
                 <p class="text-xl  py-6 font-medium">Monthly Surface Air Temperature- Sri Lanka <sup>3</sup></p>
                 <div id="airTempChart"> </div>
                 <p class="text-xs my-2 leading-none">Surface air temperature: temperature of the air at or near the
@@ -320,8 +320,8 @@
 
 
             <!-------------------------------------------- total greenhouse emissions by year --------------------------------->
-            <div>
-            <p class="text-xl  py-6 font-medium">Total Greenhouse Gas Emissions by Year - Sri Lanka</p>
+            <div class="my-8">
+            <p class=" text-xl  py-6 font-medium">Total Greenhouse Gas Emissions by Year - Sri Lanka</p>
             <canvas id="SLGreenhouse"></canvas>
             <a href="data/totalGreenhouse.json" download
                 class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download the Dataset</a>
@@ -329,10 +329,11 @@
 
 
             <!---------------------- embedded chart - Co2 emissions timeline graph - Srilanka--------------------------------- -->
+            <div class="my-8">
             <p class="text-xl  py-6 font-medium">CO <sub>2</sub> Emissions by Year - Sri Lanka <sup>4</sup></p>
             <iframe src="https://ourworldindata.org/grapher/annual-co2-emissions-per-country?country=~LKA&tab=chart"
                 style="width: 95%; height: 600px; border: 0px none; margin-left: auto; margin-right: auto;" allow="web-share; clipboard-write"></iframe>
-
+            </div>
 
 
             <!-- fossil fuel consumption in Sri Lanka -->
@@ -341,6 +342,11 @@
                 <img src="images/fuel.png" alt="fuel Usage in Sri Lanka" class="lg:max-w-[70%]">
                 <sub>4.The Fuel Consumption in Sri Lanka too has exponentially increased alongside emissions </sub>
             </div>
+
+            <p>
+                Overlapping with the global increase in the use of fossil fuels and greenhouse emissions, Sri Lanka too has been emitting more and more greenhouse gases each year.
+                The goal should be to minimize the rapid increase of these emissions that directly influence our climate and in turn our very lives. 
+            </p>
 
 <div class="button-animated  mt-5 p-4">
     <p class="font-bold">

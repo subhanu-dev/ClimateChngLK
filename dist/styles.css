@@ -818,6 +818,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .ml-10 {
   margin-left: 2.5rem;
 }
@@ -884,6 +889,26 @@ video {
 
 .mt-\[80\%\] {
   margin-top: 80%;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -1879,7 +1904,7 @@ html,
 }
 
 .pie-chart-style{
-  background-image: linear-gradient(120deg,rgb(156, 229, 248),#a8fcb2);
+  background-image: linear-gradient(120deg,rgb(156, 229, 248),#a8fcb2 );
   box-shadow: 0px 1px 1px rgb(0, 22, 2);
 }
 

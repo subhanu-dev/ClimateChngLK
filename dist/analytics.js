@@ -321,7 +321,7 @@ const chart2 = new Chart(ctx2, {
     }
 });
 
-
+// highchart for sl monthly air temp data
 
 fetch('data/srilanka monthly data.csv')  
     .then(response => response.text())
@@ -334,9 +334,21 @@ fetch('data/srilanka monthly data.csv')
                 type: 'line'
             },
             title: null,
-            series: [{
-                name: 'Data from CSV',
-            }],
+            series: [
+                {
+                    name: 'Series 1',
+                    color: '#003a48'  // Specify color for Series 1
+                },
+                {
+                    name: 'Series 2',
+                    color: '#60b86a'  // Specify color for Series 2
+                },
+                {
+                    name: 'Series 3',
+                    color: '#3EAFDF'  // Specify color for Series 3
+                }
+            
+            ],
             tooltip: {
                 backgroundColor: '#000000',  // Black background
                 style: {
@@ -417,8 +429,9 @@ fetch('data/yearlyemissions.csv')
                     label: 'Carbon Dioxide Emissions',
                     data: values,
                     borderColor: '#60b86a',
-                    backgroundColor: '#003a4871',
-                    fill: true
+                    backgroundColor: '#60b86aa0',
+                    fill: true,
+                    pointRadius: 0,
                 }]
             },
             options: {
