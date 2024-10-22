@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tailwindcss -i ./src/input.css -o ./styles.css --watch"
+    "build": "tailwindcss -i ./src/input.css -o ./styles.css --watch",
+    "prod":"cross-env NODE_ENV=production npx tailwindcss -i ./src/input.css -o ./styles.css --minify"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "tailwindcss": "^3.4.5"
   }
 }
