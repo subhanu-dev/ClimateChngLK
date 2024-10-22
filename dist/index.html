@@ -17,8 +17,10 @@
     <script src="https://kit.fontawesome.com/d89352fd46.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap" rel="stylesheet">
     <!-- importing  gsap-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script defer src="index.js"></script>
 </head>
 
@@ -30,6 +32,7 @@
     <!-- ----------------------------------------------------------------nav--------------------------------------------------------------- -->
 
     <nav>
+
         <div id="topbar" class="w-screen hidden sm:block absolute h-5 -top-3 bg-white z-40"></div>
         <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl ">ClimateChngLK
         </h1>
@@ -40,47 +43,58 @@
             <div id="bar3" class="w-5 sm:w-7 mt-1 h-1 bg-white sm:bg-black rounded-sm duration-300"></div>
         </div>
 
-    </nav>
-   
-        <svg id="navbtn-svg" class="absolute hidden sm:block -top-8 -right-16 overflow-hidden z-40" width="200" height="250"
-            viewbox="0,0,400,400" xmlns="http://www.w3.org/2000/svg">
+
+           <!-- curved svg element on absolute -->
+        <svg id="navbtn-svg" class="absolute hidden sm:block -top-8 -right-16 overflow-hidden z-40" width="200"
+            height="250" viewbox="0,0,400,400" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M184.101 112.026C183.519 126.717 171.513 138.466 156.811 138.466H111.046C95.5194 138.466 82.7492 126.251 82.1492 110.736C81.2988 88.7489 80.2793 59.4738 80.2793 45.5C80.2793 21.5295 0 21.5295 0 21.5295V0H137.529H271.279V21.5295C271.279 21.5295 200 17 190.279 45.5C186.919 55.3515 185.046 88.1683 184.101 112.026Z"
                 fill="white" id="svg1" />
         </svg>
-  
 
-    <!-- --------------------------------------------------------------------navdrop------------------------------------------------------------ -->
 
-    <div id="navdrop"
-        class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out overflow-hidden ">
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">ClimateChngLK
-        </h1>
-        <ul id="navitems" class="text-gray-500 mt-40 self-end text-4xl pr-20 font-bold">
-            <li class="text-end">
-                 <a href="index.html" class="hover:text-gray-600 duration-100">Home</a>
-            </li>
-            <li class="text-end"> <a href="whats.html" class="hover:text-gray-600 duration-100">What's That </a></li>
-            <li class="text-end"> <a href="action.html" class="hover:text-gray-600 duration-100">Action </a></li>
-            <li class="text-end"> <a href="analytics.html" class="hover:text-gray-600 duration-100">Analytics</a></li>
-            <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
+        <!-- --------------------------------------------------------------------navdrop------------------------------------------------------------ -->
+        <div id="navdrop"
+            class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out overflow-hidden ">
+            <h1
+                class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">
+                ClimateChngLK
+            </h1>
+            <ul id="navitems" class="text-gray-500 mt-40 self-end text-4xl pr-20 font-bold">
+                <li class="text-end">
+                    <a href="index.html" class="hover:text-gray-600 duration-100">Home</a>
+                </li>
+                <li class="text-end"> <a href="whats.html" class="hover:text-gray-600 duration-100">What's That </a>
+                </li>
+                <li class="text-end"> <a href="action.html" class="hover:text-gray-600 duration-100">Action </a></li>
+                <li class="text-end"> <a href="analytics.html" class="hover:text-gray-600 duration-100">Analytics</a>
+                </li>
+                <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
 
-        </ul>
+            </ul>
 
-<div id="svgwrapper" class="relative bottom-60 hidden lg:block ">    
-            <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none" xmlns="http://www.w3.org/2000/svg" class=" absolute">
-                
-                <circle  cx="-20" cy="300" r="250" fill="#031806" id="animatedCircle1"></circle>
-                <circle  cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
-                <circle  cx="-50" cy="300" r="150" fill="#226A7F"id="animatedCircle3" ></circle>
+            <div id="svgwrapper" class="relative bottom-60 hidden lg:block ">
+                <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class=" absolute">
+
+                    <circle cx="-20" cy="300" r="250" fill="#031806" id="animatedCircle1"></circle>
+                    <circle cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
+                    <circle cx="-50" cy="300" r="150" fill="#226A7F" id="animatedCircle3"></circle>
                 </svg>
-            <img src="images/globe img.png" alt="world images" class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50">
-</div>
-            
-    </div>
-<!-- preloader -->
+                <img src="images/globe img.png" alt="world images"
+                    class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50">
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-------------------------- preloader ---------------------------->
     <div id="preloader" class="loader">
-     </div>
+    </div>
+
+
 
     <!-- -----------------------------------------Hero---------------------------------------------------------------------------- -->
 
@@ -92,7 +106,7 @@
             </h2>
             <p class="hidden lg:block max-w-96 font-medium mt-2">Harness the power of knowledge and action to combat
                 climate change. Discover what you can do today for a sustainable tomorrow.</p>
-            <a href="analytics.html" class="hidden lg:block">
+            <a href="whats.html" class="hidden lg:block">
                 <div id="button"
                     class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300">
                     <span class="relative z-20">Start Here</span>
@@ -123,25 +137,29 @@
 
         </div>
 
-<!-- only for mobile screens  -->
+        <!-- only for mobile screens  -->
 
-<!-- blue background svg behind globe -->
-<div id="wrapper">
-    
-    <svg class="absolute sm:hidden -z-50 left-0 top-40 " viewBox="0 0 412 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M412 226.5C412 285.871 315.207 350 247 350C178.793 350 0 331.371 0 272C0 212.629 244.793 0 313 0C381.207 0 412 167.129 412 226.5Z" fill="url(#paint0_linear_640_32)"/>
-        <defs>
-        <linearGradient id="paint0_linear_640_32" x1="25" y1="287" x2="327.5" y2="23.5" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#052933"/>
-        <stop offset="1" stop-color="#3DBFE5"/>
-        </linearGradient>
-        </defs>
-        </svg>
-</div>
+        <!-- blue background svg behind globe -->
+        <div id="wrapper">
+
+            <svg class="absolute sm:hidden -z-50 left-0 top-40 " viewBox="0 0 412 350" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M412 226.5C412 285.871 315.207 350 247 350C178.793 350 0 331.371 0 272C0 212.629 244.793 0 313 0C381.207 0 412 167.129 412 226.5Z"
+                    fill="url(#paint0_linear_640_32)" />
+                <defs>
+                    <linearGradient id="paint0_linear_640_32" x1="25" y1="287" x2="327.5" y2="23.5"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#052933" />
+                        <stop offset="1" stop-color="#3DBFE5" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
 
         <div id="for-mobile" class="flex justify-center items-center gap-4 lg:hidden mt-16">
-            <h2 class=" text-2xl ">And You Think <span
-                    class="font-sinhala font-semibold">ශ්‍රීලංකා </span> is Immune?</h2>
+            <h2 class=" text-2xl ">And You Think <span class="font-sinhala font-semibold">ශ්‍රීලංකා </span> is Immune?
+            </h2>
             <a href="whats.html">
                 <div id="button"
                     class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 text-center w-24 overflow-hidden btnshadow duration-300">
@@ -154,14 +172,14 @@
         </div>
     </main>
 
-<!-- only for desktop -->
+    <!-- only for desktop -->
 
     <div id="factsbar" class=" justify-center items-center hidden lg:flex mt-10 gap-10">
         <p class="text-3xl font-bold">Every Minute Globally</p>
         <div
             class=" h-20 w-96 rounded-lg factsBox factsShadow flex items-center justify-center text-black text-base font-semibold  relative lg:mt-5 xl:-mt-2 ">
             <p id="factsdiv" class="text-center w-3/4 ease-in duration-1000">27 FootBall Fields of Forests Cleared</p>
-            
+
         </div>
     </div>
 
@@ -186,74 +204,88 @@
     </svg>
 
 
-<!-- cards -->
+    <!-- cards -->
 
     <div id="cards" class="flex text-center flex-col gap-4  mx-auto mt-20  w-[70%] lg:hidden font-semibold">
         <h3 class="text-3xl ">Globally Every Minute</h3>
-        <div id="card1" class="card delay-100"><p>27 football fields of forest cleared</p></div>
-        <div id="card2" class="card delay-200"><p>2.4 million pounds of carbon dioxide released</p></div>
-        <div id="card3" class="card delay-300"><p>Over 3,000 tons of plastic waste enter the oceans</p></div>
-        <div id="card3" class="card delay-500"><p>60 Species go extinct</p></div>
+        <div id="card1" class="card delay-100">
+            <p>27 football fields of forest cleared</p>
+        </div>
+        <div id="card2" class="card delay-200">
+            <p>2.4 million pounds of carbon dioxide released</p>
+        </div>
+        <div id="card3" class="card delay-300">
+            <p>Over 3,000 tons of plastic waste enter the oceans</p>
+        </div>
+        <div id="card3" class="card delay-500">
+            <p>60 Species go extinct</p>
+        </div>
     </div>
 
 
-<!-- Quote -->
+    <!-- Quote -->
 
-<figure class="mt-40 lg:hidden">
-<div id="svgcontainer" class="relative sm:max-w-[80%]">
-    
-    <svg id="greenbgsvg" viewBox="0 0 420 500" fill="none" xmlns="http://www.w3.org/2000/svg" class="  absolute sm:hidden  sm:rotate-180  -z-10 -left-4 md:-top-80 rotate-12">
-    <path d="M55.4748 49.5741C122.867 -20.8831 242.977 -15.3702 323.749 61.8876C404.521 139.145 415.368 258.892 347.976 329.349C280.585 399.807 136.986 540.897 56.2137 463.639C-24.5584 386.381 -11.9169 120.031 55.4748 49.5741Z" fill="#9AAC34"/>
-    
-    </svg> 
+    <figure class="mt-40 lg:hidden">
+        <div id="svgcontainer" class="relative sm:max-w-[80%]">
 
-</div>
-<div id="quotes" class="duration-[1.5s] delay-700 opacity-0">
+            <svg id="greenbgsvg" viewBox="0 0 420 500" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="  absolute sm:hidden  sm:rotate-180  -z-10 -left-4 md:-top-80 rotate-12">
+                <path
+                    d="M55.4748 49.5741C122.867 -20.8831 242.977 -15.3702 323.749 61.8876C404.521 139.145 415.368 258.892 347.976 329.349C280.585 399.807 136.986 540.897 56.2137 463.639C-24.5584 386.381 -11.9169 120.031 55.4748 49.5741Z"
+                    fill="#9AAC34" />
 
-    <img src="images/quotes.png" alt="quotes" class="max-w-20 w-full ml-20 ">
-    <p class=" text-end max-w-[70%] mx-auto z-30 text-xl pt-7  font-semibold">The science is clear: The impacts of climate change are no longer subtle. They are playing out in real time, and we are seeing them unfold in the form of unprecedented weather extremes.</p>
-        <a href="https://michaelmann.net/" target="_blank">
-            <p class="text-end pr-[15%] mt-5 mx-auto  text-lg font-bold hover:text-waterdarkblue-0 active:text-waterdarkblue-0duration-300">Dr. Michael E. Mann</p>
-        </a>
+            </svg>
 
-</div>
-</figure>
+        </div>
+        <div id="quotes" class="duration-[1.5s] delay-700 opacity-0">
 
-<section id="banaAndButton" class="lg:hidden flex flex-col justify-center items-center md:flex-row gap-2 mt-[80%] sm:mt-40 sm:pt-0">
-    <p class="text-xl font-bold px-4 text-center">It’s all about Saving the Planet for the Future 
-        Generations.</p>
+            <img src="images/quotes.png" alt="quotes" class="max-w-20 w-full ml-20 ">
+            <p class=" text-end max-w-[70%] mx-auto z-30 text-xl pt-7  font-semibold">The science is clear: The impacts
+                of climate change are no longer subtle. They are playing out in real time, and we are seeing them unfold
+                in the form of unprecedented weather extremes.</p>
+            <a href="https://michaelmann.net/" target="_blank">
+                <p
+                    class="text-end pr-[15%] mt-5 mx-auto  text-lg font-bold hover:text-waterdarkblue-0 active:text-waterdarkblue-0duration-300">
+                    Dr. Michael E. Mann</p>
+            </a>
+
+        </div>
+    </figure>
+
+    <section id="banaAndButton"
+        class="lg:hidden flex flex-col justify-center items-center md:flex-row gap-2 mt-[80%] sm:mt-40 sm:pt-0">
+        <p class="text-xl font-bold px-4 text-center">It’s all about Saving the Planet for the Future
+            Generations.</p>
         <a href="action.html">
             <div id="button"
-                        class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300">
-                        <span class="relative z-20">Take Action</span>
-                        <div id="circles"
-                            class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 -bottom-6 -right-6 blur-sm duration-500  ">
-                        </div>
-                    </div>
+                class="bg-waterdarkblue-0 p-2 inline-block rounded-md mt-4 relative z-0 overflow-hidden btnshadow duration-300">
+                <span class="relative z-20">Take Action</span>
+                <div id="circles"
+                    class="w-12 h-12  bg-waterlightblue-0 rounded-[50%] absolute z-10 -bottom-6 -right-6 blur-sm duration-500  ">
+                </div>
+            </div>
         </a>
 
-</section>
+    </section>
 
-<footer class="px-4 bg-white mt-20 lg:hidden relative overflow-hidden "> 
-   <div id="socials" class="mt-3 lg:hidden ">
-   
-    <i class="fa-brands fa-facebook-f text-bggreen-0  mx-1"></i>
-    <i class="fa-brands fa-twitter text-bggreen-0 mx-1"></i>
-    <i class="fa-brands fa-square-instagram text-bggreen-0 mx-1"></i>
-    <i class="fa-brands fa-linkedin-in text-bggreen-0 mx-1"></i>
-    <i class="fa-brands fa-youtube text-bggreen-0 mx-1"></i>
-    <p class="text-sm pr-4 pb-1 mt-1  text-darkgreen-0 "> &copy;ClimateChngLK</p>
-</div>
+    <footer class="px-4 bg-white mt-20 lg:hidden relative overflow-hidden ">
+        <div id="socials" class="mt-3 lg:hidden ">
 
-</footer>
+            <i class="fa-brands fa-facebook-f text-bggreen-0  mx-1"></i>
+            <i class="fa-brands fa-twitter text-bggreen-0 mx-1"></i>
+            <i class="fa-brands fa-square-instagram text-bggreen-0 mx-1"></i>
+            <i class="fa-brands fa-linkedin-in text-bggreen-0 mx-1"></i>
+            <i class="fa-brands fa-youtube text-bggreen-0 mx-1"></i>
+            <p class="text-sm pr-4 pb-1 mt-1  text-darkgreen-0 "> &copy;ClimateChngLK</p>
+        </div>
 
-<div class="hidden lg:block  bg-white mt-6 h-1"></div>
+    </footer>
 
-<script defer src="app.js"></script> 
+    <div class="hidden lg:block  bg-white mt-6 h-1"></div>
 
-    
+    <script defer src="app.js"></script>
+
+
 </body>
 
 </html>
-
-

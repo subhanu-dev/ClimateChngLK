@@ -20,115 +20,151 @@
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/d89352fd46.js" crossorigin="anonymous"></script>
-       
-       </head>
+
+</head>
 
 <body class="font-space  bg-darkgreen-0 ">
 
     <!-- ----------------------------------------------------------------nav--------------------------------------------------------------- -->
 
     <nav>
+
         <div id="topbar" class="w-screen hidden sm:block absolute h-5 -top-3 bg-white z-40"></div>
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-white">ClimateChngLK
+        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-white ">
+            ClimateChngLK
         </h1>
 
-        <div id="bars" class="absolute top-10 right-5 sm:top-5 sm:right-14 z-50 cursor-pointer ">
+        <div id="bars" class="absolute top-10 right-6 sm:top-5 sm:right-14 z-50 cursor-pointer ">
             <div id="bar1" class="w-5 sm:w-7 mt-1 h-1  bg-white sm:bg-black rounded-sm duration-300"></div>
             <div id="bar2" class="w-5 sm:w-7 mt-1 h-1 bg-white sm:bg-black rounded-sm duration-300"></div>
             <div id="bar3" class="w-5 sm:w-7 mt-1 h-1 bg-white sm:bg-black rounded-sm duration-300"></div>
         </div>
 
-    </nav>
-    <svg id="navbtn-svg" class="absolute hidden sm:block -top-8 -right-16 overflow-hidden z-40" width="200" height="250"
-        viewbox="0,0,400,400" xmlns="http://www.w3.org/2000/svg">
 
-        <path
-            d="M184.101 112.026C183.519 126.717 171.513 138.466 156.811 138.466H111.046C95.5194 138.466 82.7492 126.251 82.1492 110.736C81.2988 88.7489 80.2793 59.4738 80.2793 45.5C80.2793 21.5295 0 21.5295 0 21.5295V0H137.529H271.279V21.5295C271.279 21.5295 200 17 190.279 45.5C186.919 55.3515 185.046 88.1683 184.101 112.026Z"
-            fill="white" id="svg1" />
+        <!-- curved svg element on absolute -->
+        <svg id="navbtn-svg" class="absolute hidden sm:block -top-8 -right-16 overflow-hidden z-40" width="200"
+            height="250" viewbox="0,0,400,400" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M184.101 112.026C183.519 126.717 171.513 138.466 156.811 138.466H111.046C95.5194 138.466 82.7492 126.251 82.1492 110.736C81.2988 88.7489 80.2793 59.4738 80.2793 45.5C80.2793 21.5295 0 21.5295 0 21.5295V0H137.529H271.279V21.5295C271.279 21.5295 200 17 190.279 45.5C186.919 55.3515 185.046 88.1683 184.101 112.026Z"
+                fill="white" id="svg1" />
+        </svg>
 
-    </svg>
 
-    <!-- --------------------------------------------------------------------navdrop------------------------------------------------------------ -->
+        <!-- --------------------------------------------------------------------navdrop------------------------------------------------------------ -->
+        <div id="navdrop"
+            class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out overflow-hidden ">
+            <h1
+                class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">
+                ClimateChngLK
+            </h1>
+            <ul id="navitems" class="text-gray-500 mt-40 self-end text-4xl pr-20 font-bold">
+                <li class="text-end">
+                    <a href="index.html" class="hover:text-gray-600 duration-100">Home</a>
+                </li>
+                <li class="text-end"> <a href="whats.html" class="hover:text-gray-600 duration-100">What's That </a>
+                </li>
+                <li class="text-end"> <a href="action.html" class="hover:text-gray-600 duration-100">Action </a></li>
+                <li class="text-end"> <a href="analytics.html" class="hover:text-gray-600 duration-100">Analytics</a>
+                </li>
+                <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
 
-    <div id="navdrop"
-        class="w-full h-full bg-white fixed z-30 top-0  flex flex-col -translate-y-full duration-1000 ease-out overflow-hidden ">
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-darkgreen-0 ">
-            ClimateChngLK
-        </h1>
-        <ul id="navitems" class="text-gray-500 mt-40 self-end text-4xl pr-20 font-bold">
-            <li class="text-end">
-                <a href="index.html" class="hover:text-gray-600 duration-100"> Home</a>
-            </li>
-            <li class="text-end"> <a href="action.html" class="hover:text-gray-600 duration-100">Action </a></li>
-            <li class="text-end"> <a href="analytics.html" class="hover:text-gray-600 duration-100">Analytics</a></li>
-            <li class="text-end"><a href="more.html" class="hover:text-gray-600 duration-100">More </a></li>
+            </ul>
 
-        </ul>
-        <div id="svgwrapper" class="relative bottom-60 hidden lg:block ">
-            <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none"
-                xmlns="http://www.w3.org/2000/svg" class=" absolute">
+            <div id="svgwrapper" class="relative bottom-60 hidden lg:block ">
+                <svg id="navsvg1" viewBox="0 0 500 500" height="1000px" width="1000px" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class=" absolute">
 
-                <circle  cx="-20" cy="300" r="250" fill="#031806" id="animatedCircle1"></circle>
-                <circle  cx="-55" cy="300" r="200" fill="#AEE33B" id="animatedCircle2"></circle>
-                <circle  cx="-50" cy="300" r="150" fill="#226A7F"id="animatedCircle3" ></circle>
-            </svg>
-            <!-- <img src="images/globe img.png" alt="world images"class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50"> -->
+                    <circle cx="-20" cy="300" r="250" fill="#031806" id="animatedCircle1"></circle>
+                    <circle cx="-55" cy="300" r="200" fill="#9AAC34" id="animatedCircle2"></circle>
+                    <circle cx="-50" cy="300" r="150" fill="#226A7F" id="animatedCircle3"></circle>
+                </svg>
+                <img src="images/globe img.png" alt="world images"
+                    class=" max-w-[25rem] -left-60 -bottom-[600px] absolute z-50">
+            </div>
+
         </div>
 
-    </div>
-    
-<!-- --------------------------------------------------- loader----------------------------------------------------------------------------->
- <div id="preloader" class="loader"> </div>
+    </nav>
 
-<!--------------------------------------------------------main-------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------- loader----------------------------------------------------------------------------->
+    <div id="preloader" class="loader"> </div>
+
+    <!--------------------------------------------------------main-------------------------------------------------------------------------------- -->
 
 
- <div id=""></div>
+    <div id=""></div>
 
-    <main class="w-3/4 mx-auto bg-white rounded-t-md mt-24 text-sm text-black pt-2 min-h-[50vh] lg:min-h-[80vh]" >
-<div id="container" class="my-3 mx-5">    
+    <main class="w-3/4 mx-auto bg-white rounded-t-md mt-24 text-sm text-black pt-2 min-h-[50vh] lg:min-h-[80vh]">
+
+        <!------------- more reseources ------------->
+        <div id="container" class="my-3 mx-5">
+
             <h1 class=" text-base lg:text-xl font-bold my-2">More Resources</h1>
-            <p>OpenEarth.org : </p><a href="" class="underline text-blue-800 "target= "_blank">https://www.openearth.org/</a>
-               <p>NASA : </p><a href="" class="underline text-blue-800 "target= "_blank">https://science.nasa.gov/climate-change//</a>
+
+            <p>OpenEarth.org : </p><a href="" class="underline text-blue-800 "
+                target="_blank">https://www.openearth.org/</a>
+            <p>NASA : </p><a href="" class="underline text-blue-800 "
+                target="_blank">https://science.nasa.gov/climate-change//</a>
+            <p>Our World in Data : </p><a href="" class="underline text-blue-800 "
+                target="_blank">https://ourworldindata.org/climate-change//</a>
+            <p>Statista : </p><a href="" class="underline text-blue-800 "
+                target="_blank">https://www.statista.com/statistics/271748/the-largest-emitters-of-co2-in-the-world/</a>
+            <p>United Nations Climate change portal : </p><a href="" class="underline text-blue-800 " target="_blank">
+                https://www.un.org/en/climatechange/what-is-climate-change</a>
+            <p>Open earth data : </p><a href="" class="underline text-blue-800 "
+                target="_blank">https://www.openearth.org/ </a>
+            <p>National Oceanic and Atmospheric Administration, United states: : </p><a href=""
+                class="underline text-blue-800 "
+                target="_blank">https://www.noaa.gov/education/resource-collections/climate/climate-change-impacts</a>
+
+
             <h2 class="text-base lg:text-xl font-bold my-2">Personal Notes</h2>
-            <p> Most of the current research on climate change points to a difficult future for all species on Earth. Changes in global temperaturess
-                coupled with it's domino effects will impact all of life. </p><br><p> The Sri Lankan island right next to the equator is expected to see even higher temperatures
-            in the coming years. It is important to take action towards reducing emissions at a global scale while supporting the cause at an individual
-        level. </p> <br>
-        <p>
- It's clear why this topic is one of the highly debated topics.
-Making lifestyle changes and industrial policies that are painful on economic systems in the short term is one of the main reasons why we still
-see some countries deter from making commitments to better the climate.</p>
-<p>Feel free to reach out for corrections, bugs or any inquiries.</p>
-</div>
+            <p> Most of the current research on climate change points to a difficult future for all species on Earth.
+                Changes in global temperaturess
+                coupled with it's domino effects will impact all of life. </p><br>
+            <p> The Sri Lankan island right next to the equator is expected to see even higher temperatures
+                in the coming years. It is important to take action towards reducing emissions at a global scale while
+                supporting the cause at an individual
+                level. </p> <br>
+            <p>
+                It's clear why this topic is one of the highly debated topics.
+                Making lifestyle changes and industrial policies that are painful on economic systems in the short term
+                is one of the main reasons why we still
+                see some countries deter from making commitments to better the climate.</p>
+            <p>Feel free to reach out for corrections, bugs or any inquiries.</p>
+        </div>
 
         <div id="container2"></div>
-        
- </main>
- 
- <div style="background-color:#AEE33B" class="p-4 rounded-b-md w-3/4 mx-auto">
-    <p class="font-bold my-2 text-sm md:text-base">Designed and Developed by: <a href="https://github.com/subhanu-dev" target="_blank" class="underline text-blue-800">Subhanu-Dev</a></p>
-<p class="text-xs mt-2">
-    Disclaimer: The website is compiled by independent research done from various data sources. The credibility of the original data is not guaranteed and the data sources are mentioned with their results in most places under footnotes or references. 
-</p>
-</div>
 
- <footer class="px-4 bg-white mt-20 lg:mt-14 relative overflow-hidden text-black">
-    <div class="hidden lg:block py-1">
-        <p class="text-xs text-black">All Rights Reserved @ClimateChngLK</p>
-    </div>
-    <div id="socials" class="mt-3 lg:hidden ">
-        <i class="fa-brands fa-facebook-f text-black mx-1"></i>
-        <i class="fa-brands fa-twitter text-black  mx-1"></i>
-        <i class="fa-brands fa-square-instagram mx-1 text-black "></i>
-        <i class="fa-brands fa-linkedin-in mx-1 text-black"></i>
-        <i class="fa-brands fa-youtube mx-1 text-black"></i>
-        <p class="text-sm pr-4 pb-1 mt-1 text-black "> &copy;ClimateChngLK</p>
+    </main>
+
+    <div style="background-color:#AEE33B" class="p-4 rounded-b-md w-3/4 mx-auto">
+        <p class="font-bold my-2 text-sm md:text-base">Designed and Developed by: <a
+                href="https://github.com/subhanu-dev" target="_blank" class="underline text-blue-800">Subhanu-Dev</a>
+        </p>
+        <p class="text-xs mt-2">
+            Disclaimer: The website is compiled by independent research done from various data sources. The credibility
+            of the original data is not guaranteed and the data sources are mentioned with their results in most places
+            under footnotes or references.
+        </p>
     </div>
 
-</footer>
+    <footer class="px-4 bg-white mt-20 lg:mt-14 relative overflow-hidden text-black">
+        <div class="hidden lg:block py-1">
+            <p class="text-xs text-black">All Rights Reserved @ClimateChngLK</p>
+        </div>
+        <div id="socials" class="mt-3 lg:hidden ">
+            <i class="fa-brands fa-facebook-f text-black mx-1"></i>
+            <i class="fa-brands fa-twitter text-black  mx-1"></i>
+            <i class="fa-brands fa-square-instagram mx-1 text-black "></i>
+            <i class="fa-brands fa-linkedin-in mx-1 text-black"></i>
+            <i class="fa-brands fa-youtube mx-1 text-black"></i>
+            <p class="text-sm pr-4 pb-1 mt-1 text-black "> &copy;ClimateChngLK</p>
+        </div>
 
-<script defer src="app.js"></script>
+    </footer>
+
+    <script defer src="app.js"></script>
 
 </body>
 
