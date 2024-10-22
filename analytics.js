@@ -72,11 +72,11 @@ datetext.innerText = `${date + dateAbb} of ${monthName} ${year} `;
 
 
 function findDayAbb(day) {
-    if (day == 1) {
+    if (day == 1 | day== 21) {
         return 'st'
-    } else if (day == 2) {
+    } else if (day == 2 | day == 22) {
         return 'nd'
-    } else if (day == 3) {
+    } else if (day == 3 | day == 23) {
         return 'rd'
     } else {
         return 'th'
