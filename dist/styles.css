@@ -1166,6 +1166,14 @@ video {
   overflow: hidden;
 }
 
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+}
+
 .rounded-\[50\%\] {
   border-radius: 50%;
 }
@@ -1338,6 +1346,10 @@ video {
 
 .pt-7 {
   padding-top: 1.75rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -2053,6 +2065,10 @@ html,
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:opacity-100 {
+    opacity: 1;
   }
 }
 

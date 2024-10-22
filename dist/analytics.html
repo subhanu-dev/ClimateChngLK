@@ -39,7 +39,8 @@
     <nav>
 
         <div id="topbar" class="w-screen hidden sm:block absolute h-5 -top-3 bg-white z-40"></div>
-        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-white">ClimateChngLK
+        <h1 class="sm:text-center ml-10 mt-2 sm:ml-0 text-2xl font-bold py-8 sm:text-3xl lg:text-4xl text-white">
+            ClimateChngLK
         </h1>
 
         <div id="bars" class="absolute top-10 right-6 sm:top-5 sm:right-14 z-50 cursor-pointer ">
@@ -49,7 +50,7 @@
         </div>
 
 
-           <!-- curved svg element on absolute -->
+        <!-- curved svg element on absolute -->
         <svg id="navbtn-svg" class="absolute hidden sm:block -top-8 -right-16 overflow-hidden z-40" width="200"
             height="250" viewbox="0,0,400,400" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -101,7 +102,7 @@
 
 
 
-    <svg id="accentsvg" width="100%" height="30%" class="absolute inset-0 -z-10" preserveAspectRatio="none"
+    <svg id="accentsvg" width="100%" height="25%" class="absolute inset-0 -z-10" preserveAspectRatio="none"
         viewBox="0 0 100 100">
         <polygon points="0,45 0,0 100,0 100,100" fill="#031806" />
     </svg>
@@ -136,7 +137,7 @@
                 <p id="coltemp" class=" block relative z-10">25 <sup>0</sup> C</p>
                 <div class="weatherico relative z-10  text-2xl"><i id="col-ico" class="fa-solid"></i></div>
                 <div
-                    class="rounded-bound duration-200  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+                    class="opacity-0 md:opacity-100 rounded-bound duration-200  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
                 </div>
             </div>
             <div
@@ -144,7 +145,7 @@
                 <p class="block font-bold">Jaffna</p>
                 <p id="jaftemp" class="block relative z-10">25 <sup>0</sup> C</p>
                 <div
-                    class="rounded-bound duratlion-500  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+                    class="opacity-0 md:opacity-100 rounded-bound duration-500  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
                 </div>
                 <div class="weatherico relative z-10  text-2xl"><i id="jaf-ico" class="fa-solid"></i></div>
 
@@ -154,12 +155,16 @@
                 <p class="block font-bold">Galle</p>
                 <p id="galtemp" class="block relative z-10">25 <sup>0</sup> C</p>
                 <div
-                    class="rounded-bound duration-700  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
+                    class="opacity-0 md:opacity-100 rounded-bound duration-700  rounded-full bg-red-500 absolute -top-[60%] -right-4 w-[40%] h-40">
                 </div>
                 <div class="weatherico relative z-10  text-2xl"><i id="gal-ico" class="fa-solid"></i></div>
             </div>
         </div>
-        <!----------------------------------Global Data section starts here---------------------------------------------------------------------------->
+
+
+        <!------------------------------------Global Data section starts here---------------------------------------------------------------------------->
+
+
         <section id="gloabaData">
             <h3 class="mt-12 text-xl lg:text-2xl font-bold border-b-2 border-black">1. Global Statistics</h3>
 
@@ -180,7 +185,7 @@
             </div>
 
             <!-------------------------------------------------- sea level increase--------------------------------------------- -->
-            <p class="sm:text-xl  py-6 font-medium">Global Rise in Sea Levels</p>
+            <p class="sm:text-xl  py-6 font-medium">Global Rise in Sea Levels <sup>1</sup></p>
             <canvas id="goOceanLevel"></canvas>
             <p class="text-xs">change in sea level in millimeters compared to the 1993-2008 average. </p>
             <a href="data/oceanlevels.csv" download class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download
@@ -198,16 +203,16 @@
             <!-------------------------------------------------------yearly  emissions by country------------------------------------------------- -->
 
             <div id="emissionsByCountry" class=" mt-10">
-                <h3 class="sm:text-xl  py-6 font-medium mb-2">Emissions by Country <svg xmlns="http://www.w3.org/2000/svg"
-                        fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
-                        class="size-6 inline-block">
+                <h3 class="sm:text-xl  py-6 font-medium mb-2">Emissions by Country <svg
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="size-6 inline-block">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
                     </svg></h3>
 
-                    
-                    <p class="text-md font-bold mb-8">Emissions by Country - 2023</p>
-                <div class="text-xs sm:text-base">                   
+
+                <p class="text-md font-bold mb-8">Emissions by Country - 2023</p>
+                <div class="text-xs sm:text-base">
                     <div id="China"
                         class=" duration-100 EC rounded-md flex justify-evenly flex-row gap-10 my-2 border-b-2 border-black">
                         <p class="font-bold ">China</p>
@@ -253,7 +258,7 @@
             </p>
 
             <!-----------------------------------------------------------------Cumulative Emissions by Country------------------------------------------------------>
-            <p class="text-md font-bold mt-8 mb-4">Cumulative Emissions by Country 1850-2021</p>
+            <p class="text-md font-bold mt-8 mb-4">Cumulative Emissions by Country 1850-2021 <sup>2</sup></p>
 
             <iframe frameborder="0" scrolling="no" marginheight="0px" marginwidth="0px"
                 style="display: initial; margin: 0 auto;"
@@ -270,7 +275,8 @@
         <img src="images/climaterisk.avif" alt="" class="md:max-w-[70%] mt-8">
         <sub>3.Soverign rating - Climate Vulnerability</sub>
 
-        <p class="mt-2">Sri lanka is one of the most vulnerable countries to the effects of climate change under many metrics. It's
+        <p class="mt-2">Sri lanka is one of the most vulnerable countries to the effects of climate change under many
+            metrics. It's
             important to know which
             sectors might be most impacted by the effects of global warming. Being in the equator, each passing year
             feels hotter that the year before.
@@ -289,7 +295,8 @@
 
         <!-- ---------------------------------------------------SriLanka's emission Data---------------------------------------------------------- -->
         <section id="sldata">
-            <h3 class="mt-12 my-4 text-xl lg:text-2xl font-bold border-b-2 border-black">3. Sri Lanka's Emission Data</h3>
+            <h3 class="mt-12 my-4 text-xl lg:text-2xl font-bold border-b-2 border-black">3. Sri Lanka's Emission Data
+            </h3>
 
             <!-- Emission numbers-->
             <div class="my-6 md:text-xl">
@@ -310,7 +317,7 @@
             <!-- --------------air temperature montly chart  -->
 
             <div class="my-8">
-                <p class="sm:text-xl  py-6 font-medium">Monthly Surface Air Temperature- Sri Lanka <sup>3</sup></p>
+                <p class="sm:text-xl  py-6 font-medium">Monthly Surface Air Temperature- Sri Lanka <sup>4</sup></p>
                 <div id="airTempChart"> </div>
                 <p class="text-xs my-2 leading-none">Surface air temperature: temperature of the air at or near the
                     Earth's surface, typically measured at a height of 1.25 to 2 meters above ground</p>
@@ -318,23 +325,24 @@
                     class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download the Dataset</a>
             </div>
 
-           
+
 
 
             <!-------------------------------------------- total greenhouse emissions by year --------------------------------->
             <div class="my-8">
-            <p class=" sm:text-xl  py-6 font-medium">Total Greenhouse Gas Emissions by Year - Sri Lanka</p>
-            <canvas id="SLGreenhouse"></canvas>
-            <a href="data/totalGreenhouse.json" download
-                class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download the Dataset</a>
+                <p class=" sm:text-xl  py-6 font-medium">Total Greenhouse Gas Emissions by Year - Sri Lanka</p>
+                <canvas id="SLGreenhouse"></canvas>
+                <a href="data/totalGreenhouse.json" download
+                    class="text-[10px] pie-chart-style p-1 rounded-md mt-1">Download the Dataset</a>
             </div>
 
 
             <!---------------------- embedded chart - Co2 emissions timeline graph - Srilanka--------------------------------- -->
             <div class="my-8">
-            <p class="sm:text-xl  py-6 font-medium">CO <sub>2</sub> Emissions by Year - Sri Lanka <sup>4</sup></p>
-            <iframe src="https://ourworldindata.org/grapher/annual-co2-emissions-per-country?country=~LKA&tab=chart"
-                style="width: 95%; height: 600px; border: 0px none; margin-left: auto; margin-right: auto;" allow="web-share; clipboard-write"></iframe>
+                <p class="sm:text-xl  py-6 font-medium">CO <sub>2</sub> Emissions by Year - Sri Lanka <sup>5</sup></p>
+                <iframe src="https://ourworldindata.org/grapher/annual-co2-emissions-per-country?country=~LKA&tab=chart"
+                    style="width: 95%; height: 600px; border: 0px none; margin-left: auto; margin-right: auto;"
+                    allow="web-share; clipboard-write"></iframe>
             </div>
 
 
@@ -342,24 +350,26 @@
             <div>
                 <p class="sm:text-xl  py-6 font-medium">Fossil Fuel Consumption in Sri Lanka</p>
                 <img src="images/fuel.png" alt="fuel Usage in Sri Lanka" class="lg:max-w-[70%]">
-                <sub>4.The Fuel Consumption in Sri Lanka too has exponentially increased alongside emissions </sub>
+                <sub>6.The Fuel Consumption in Sri Lanka too has exponentially increased alongside emissions </sub>
             </div>
 
             <p>
-                Overlapping with the global increase in the use of fossil fuels and greenhouse emissions, Sri Lanka too has been emitting more and more greenhouse gases each year.
-                The goal should be to minimize the rapid increase of these emissions that directly influence our climate and in turn our very lives. 
+                Overlapping with the global increase in the use of fossil fuels and greenhouse emissions, Sri Lanka too
+                has been emitting more and more greenhouse gases each year.
+                The goal should be to minimize the rapid increase of these emissions that directly influence our climate
+                and in turn our very lives.
             </p>
 
-<div class="button-animated  mt-5 p-4">
-    <p class="font-bold">
-    Find what we can do to mitigate global warming <i class="fa-solid fa-caret-right"></i><a href="action.html"
-    class="underline">  Action</a>
-</p>
-</div>
+            <div class="button-animated  mt-5 p-4">
+                <p class="font-bold">
+                    Find what we can do to mitigate global warming <i class="fa-solid fa-caret-right"></i><a
+                        href="action.html" class="underline"> Action</a>
+                </p>
+            </div>
 
         </section>
 
-       
+
 
 
 
@@ -370,27 +380,27 @@
 
         <h3 class="text-xl font-bold border-b-2 border-black">References</h3>
         <div id="reference-material" class="text-sm">
-            <p id="footnote1">Carbonbrief.org : <a class="underline"
+            <p id="footnote1">1. Global Sea levels: <a class="underline"
+                    href="https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level"
+                    target="_blank">https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level</a>
+            </p>
+            <p id="footnote1">2.Carbonbrief.org : <a class="underline"
                     href="https://www.carbonbrief.org/analysis-which-countries-are-historically-responsible-for-climate-change/"
                     target="_blank">https://www.carbonbrief.org/analysis-which-countries-are-historically-responsible-for-climate-change/</a>
             </p>
-            <p id="footnote2">Moody soverign rating - Climate Vulnerability: <a class="underline"
+            <p id="footnote2">3.Moody soverign rating - Climate Vulnerability: <a class="underline"
                     href="https://www.sciencedirect.com/science/article/abs/pii/S0275531923001666" target="_blank">
                     https://www.sciencedirect.com/science/article/abs/pii/S0275531923001666</a></p>
-            <p id="footnote2">World Bank Climate Knowledge Portal : <a class="underline"
+            <p id="footnote2">4.World Bank Climate Knowledge Portal : <a class="underline"
                     href="https://climateknowledgeportal.worldbank.org/country/sri-lanka" target="_blank">
                     https://climateknowledgeportal.worldbank.org/country/sri-lanka</a></p>
-            <p id="footnote1">Ministry of power & Energy, Sri lanka- 2022 progress report: <a class="underline"
-                    href="https://energymin.gov.lk/web/images/En_Progress_2022-compressed_1.pdf"
-                    target="_blank">https://energymin.gov.lk/web/images/En_Progress_2022-compressed_1.pd</a>
-            </p>
-            <p id="footnote1"> Our World in Data (Embedded chart): <a class="underline"
+            <p id="footnote1">5. Our World in Data (Embedded chart): <a class="underline"
                     href="https://ourworldindata.org/co2-emissions"
                     target="_blank">https://ourworldindata.org/co2-emissions</a>
             </p>
-            <p id="footnote1"> Global Sea levels: <a class="underline"
-                    href="https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level"
-                    target="_blank">https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level</a>
+            <p id="footnote1">6.Ministry of power & Energy, Sri lanka- 2022 progress report: <a class="underline"
+                    href="https://energymin.gov.lk/web/images/En_Progress_2022-compressed_1.pdf"
+                    target="_blank">https://energymin.gov.lk/web/images/En_Progress_2022-compressed_1.pd</a>
             </p>
 
 
