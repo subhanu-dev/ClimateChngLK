@@ -1,7 +1,7 @@
 {
   "name": "climatechng",
   "version": "1.0.0",
-  "description": "��#\u0000C\u0000l\u0000i\u0000m\u0000a\u0000t\u0000e\u0000C\u0000h\u0000n\u0000g\u0000L\u0000K\u0000\r\u0000 \u0000",
+  "description": "Web project on CLimatechange's impact on SL",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
