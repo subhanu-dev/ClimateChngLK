@@ -2,6 +2,11 @@
 
 Category: Data Analysis, Visualization, Front End Web Development, UI/UX
 
+> See analytics: [https://subhanu-dev.github.io/ClimateChngLK/analytics.html](https://subhanu-dev.github.io/ClimateChngLK/analytics.html)<br>
+> Live at : [https://subhanu-dev.github.io/ClimateChngLK/index.html](https://subhanu-dev.github.io/ClimateChngLK/index.html)
+
+> Dribbble design link: [climatechng-dribbble](https://dribbble.com/shots/25081509-ClimateChngLK-Website-Summarizing-Climate-Change-Metrics)
+> 
 Web dashboard on Climate Change's Impact on Sri Lanka and the world. <br> Shows the trends of global warming, CO2 emissions over the decades and future trends.
 This analysis gives unique insights into the Industries that contribute most towards global warming, the countries with the highest rates of emission, the cumulative emission contribution towards global warming by top emitters and attempts to highlight the gravity of the current situation.
 
@@ -25,10 +30,6 @@ To see all the data sources and resources used, please navigate to more page.
 ![Global Warming](images/globalwarming.gif)
 
 
-> See analytics: [https://subhanu-dev.github.io/ClimateChngLK/analytics.html](https://subhanu-dev.github.io/ClimateChngLK/analytics.html)<br>
-> Live at : [https://subhanu-dev.github.io/ClimateChngLK/index.html](https://subhanu-dev.github.io/ClimateChngLK/index.html)
-
-> Dribbble design link: [climatechng-dribbble](https://dribbble.com/shots/25081509-ClimateChngLK-Website-Summarizing-Climate-Change-Metrics)
 
 ---
 Made with ❤️ by [Subhanu](https://github.com/subhanu-dev)
